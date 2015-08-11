@@ -11,6 +11,7 @@ app.config(['$routeProvider', function($routeProvider) {
         .otherwise({
             //templateUrl: 'app/views/error.html',
             //controller: 'ErrorCtrl'
+            redirectTo: "/"
         });
 }]);
 
