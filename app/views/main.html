@@ -1,3 +1,5 @@
+<div ng-include="'app/views/partials/header.html'"></div>
+
 <div id="main" class="col-xs-12">
     <div id="slide">
         <div class="box">
@@ -11,12 +13,12 @@
 <div id="about" class="col-xs-12">
     <h1>Sobre Mim</h1>
     <p>Lorem Ipsum...</p>
-    <div ng-include="'app/views/partials/skills-list.html'"></div>
+    <div ng-include="'app/views/elements/skills-list.html'"></div>
 </div>
 
 <div id="work" class="col-xs-12">
     <h1>Portfólio</h1>
-    <div ng-include="'app/views/partials/skills-list.html'"></div>
+    <div ng-include="'app/views/elements/skills-list.html'"></div>
     <div class="box">
         <h1>Titulo</h1>
         <p>Description</p>
@@ -51,10 +53,4 @@
     </div>
 </div>
 
-<footer>
-    <div class="col-xs-6">Thais Martins - 2015</div>
-    <ul class="social col-xs-6">
-        <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-    </ul>
-</footer>
+<div ng-include="'app/views/partials/footer.html'"></div>
