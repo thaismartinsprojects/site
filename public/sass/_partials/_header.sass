@@ -1,16 +1,45 @@
 header
-  height: 100px
-  position: fixed
+  height: $height_header
+  position: fixed !important
+  padding: 0 !important
+  margin: 0 !important
+  z-index: 2
+  background:
+    color: $color_primary
+  -webkit-box-shadow: 0 0 8px 2px $color_primary_dark
+  -moz-box-shadow: 0 0 8px 2px $color_primary_dark
+  box-shadow: 0 0 8px 2px $color_primary_dark
 
   .logo
-    a
+    margin: 15px 0
+    display: block
+
+    .design
+      width: 40px
+      height: 40px
+      background:
+        color: $color_primary_dark
+      padding: 15px 10px
+      float: left
       color: $color_soft
 
-      .design
-        width: 40px
-        height: 40px
+  nav
+    padding: 20px 10px
+
+    p
+      float: right
+
+      &.back
+        display: none
+    ul
+      float: right
+
+      li
         background:
-          color: red
-        padding: 20px
-        margin: 10px
-        float: left
+          color: $color_primary_dark
+        height: 5px
+        width: 40px
+        margin: 5px 0
+
+  .full-menu
+    display: none

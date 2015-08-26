@@ -14,10 +14,16 @@ body { font-family: "Ek Mukta"; font-weight: 200; line-height: 1; }
 
 .container-fluid { padding: 0; margin: 0; }
 
-header { height: 100px; position: fixed; }
-header .logo a { color: #FFFFFF; }
-header .logo a .design { width: 40px; height: 40px; background-color: red; padding: 20px; margin: 10px; float: left; }
+header { height: 70px; position: fixed !important; padding: 0 !important; margin: 0 !important; z-index: 2; background-color: #FBFBFB; -webkit-box-shadow: 0 0 8px 2px #d5d5d5; -moz-box-shadow: 0 0 8px 2px #d5d5d5; box-shadow: 0 0 8px 2px #d5d5d5; }
+header .logo { margin: 15px 0; display: block; }
+header .logo .design { width: 40px; height: 40px; background-color: #d5d5d5; padding: 15px 10px; float: left; color: #FFFFFF; }
+header nav { padding: 20px 10px; }
+header nav p { float: right; }
+header nav p.back { display: none; }
+header nav ul { float: right; }
+header nav ul li { background-color: #d5d5d5; height: 5px; width: 40px; margin: 5px 0; }
+header .full-menu { display: none; }
 
-#main { background-color: #FBFBFB; }
+#main { background-color: #FBFBFB; height: 100%; padding-top: 90px; }
 
 /*# sourceMappingURL=style.css.map */
