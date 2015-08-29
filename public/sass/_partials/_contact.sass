@@ -1,0 +1,27 @@
+#contact
+  height: 100%
+  padding:
+    top: $height_header + $page_padtop
+    left: $page_pad
+    right: $page_pad
+  position: absolute
+  background:
+    color: $color_secondary
+
+  h1
+    @extend %h1
+    font:
+      weight: 100
+    margin:
+      top: 25px
+      bottom: 20px
+    color: $color_soft
+    text-align: center
+
+    .line
+      @extend %line
+      background:
+        color: $color_primary
+      margin:
+        left: auto
+        right: auto

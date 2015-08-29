@@ -1,5 +1,32 @@
 #main
-  background:
-    color: $color_primary
   height: 100%
-  padding-top: $height_header + $page_padtop
+  padding:
+    top: $height_header + $page_padtop
+    left: $page_pad
+    right: $page_pad
+  position: absolute
+  background:
+    image: url("../images/background-main.jpg")
+    repeat: repeat
+
+  #slide
+    .content
+      float: left
+      margin:
+        top: 150px
+      color: $color_soft
+
+      h1
+        @extend %h1
+
+      .line
+        @extend %line
+
+      p
+        @extend %p
+
+    .image
+      float: right
+
+      img
+        max-width: 100%

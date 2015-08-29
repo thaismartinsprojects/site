@@ -43,10 +43,28 @@ table
 
 body
   font:
-    family: "Ek Mukta"
+    family: "Yantramanav"
     weight: 200
   line-height: 1
+
+a
+  &:hover
+    text-decoration: none
 
 .container-fluid
   padding: 0
   margin: 0
+
+%noshadow
+  -webkit-box-shadow: none!important
+  -moz-box-shadow: none!important
+  box-shadow: none!important
+
+%nofocus
+  outline: 0
+  border:
+    color: inherit
+    width: 0
+  -moz-box-shadow: none
+  -webkit-box-shadow: none
+  box-shadow: none

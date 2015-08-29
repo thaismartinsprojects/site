@@ -13,6 +13,6 @@ app.controller('MainCtrl', ['$scope', '$interval', 'SlideService',
         id++;
     };
 
-    $interval(showCurrentSlide, 50000);
+    $interval(showCurrentSlide, 5000);
     showCurrentSlide();
 }]);

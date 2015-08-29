@@ -1,10 +1,10 @@
-<header class="col-xs-12">
+<header class="col-xs-12"  ng-class="{'active': activeMenu}">
     <section class="logo col-xs-6">
         <div class="design">TM</div>
-        <div class="title">Thais Martins</div>
+        <div class="title"><span>Thais</span> Martins</div>
     </section>
     <nav class="col-xs-6">
-        <ul>
+        <ul ng-click="toogleMenu()">
             <li></li>
             <li></li>
             <li></li>
@@ -12,12 +12,14 @@
         <p class="menu">menu</p>
         <p class="back">voltar</p>
     </nav>
-    <section class="full-menu col-xs-6">
-        <ul>
-            <li><a href="">Teste</a></li>
-            <li><a href="">Teste</a></li>
-            <li><a href="">Teste</a></li>
-            <li><a href="">Teste</a></li>
-        </ul>
-    </section>
 </header>
+<section id="full-menu" class="col-xs-6" ng-class="{'active': activeMenu}">
+    <ul>
+        <li ng-repeat="item in menu">
+            <a href="#{{item.slug}}" ng-click="toogleMenu()">
+                {{item.name}}
+            </a>
+            <span></span>
+        </li>
+    </ul>
+</section>

@@ -1,0 +1,32 @@
+.form
+  .form-group
+    position: relative
+    margin: 40px 0
+    input,
+    textarea,
+    select
+      background:
+        color: transparent
+      border:
+        top: transparent
+        left: transparent
+        right: transparent
+        bottom: 1px solid $color_primary
+      color: $color_soft
+      @extend %p
+      @extend %nofocus
+      @extend %noshadow
+
+    label
+      position: absolute
+      color: $color_soft
+      font:
+        weight: 300
+        size: 1.4em
+      left: 10px
+
+      &.active
+        top: -20px
+        font:
+          size: 1em
+        color: $color_primary

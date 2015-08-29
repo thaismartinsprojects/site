@@ -1,0 +1,40 @@
+@mixin box-shadow($top, $left, $spreat, $blur, $color, $inset: false)
+  @if $inset
+    -webkit-box-shadow: inset $top $left $spreat $blur $color
+    -moz-box-shadow: inset $top $left $spreat $blur $color
+    box-shadow: inset $top $left $spreat $blur $color
+  @else
+    -webkit-box-shadow: $top $left $spreat $blur $color
+    -moz-box-shadow: $top $left $spreat $blur $color
+    box-shadow: $top $left $spreat $blur $color
+
+@mixin rounded($radius: 0.5em)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+@mixin transparency($percentage)
+  -moz-opacity: $percentage
+  -khtml-opacity: $percentage
+  opacity: $percentage
+
+@mixin background-gradient($firstColor, $secondColor, $startPosition, $endPosition)
+  background: $firstColor
+  background: -moz-linear-gradient(top, $firstColor $startPosition, $secondColor $endPosition)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop($startPosition,$firstColor), color-stop($endPosition,$secondColor))
+  background: -webkit-linear-gradient(top, $firstColor $startPosition,$secondColor $endPosition)
+  background: -o-linear-gradient(top, $firstColor $startPosition,$secondColor $endPosition)
+  background: -ms-linear-gradient(top, $firstColor $startPosition,$secondColor $endPosition)
+  background: linear-gradient(top bottom, $firstColor $startPosition,$secondColor $endPosition)
+
+@mixin rotate($deg)
+  -ms-transform: rotate(#{$deg}deg)
+  -webkit-transform: rotate(#{$deg}deg)
+  -moz-transform: rotate(#{$deg}deg)
+  -o-transform: rotate(#{$deg}deg)
+  transform: rotate(#{$deg}deg)
+
+@mixin blur($intensity)
+  -webkit-filter: blur($intensity)
+  -moz-filter: blur($intensity)
+  filter: blur($intensity)

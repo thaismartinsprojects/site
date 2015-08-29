@@ -1,0 +1,25 @@
+.btn-primary
+  background:
+    color: transparent
+  border: 1px solid $color_soft
+  color: $color_soft
+  font:
+    weight: 100
+  width: 150px
+  margin: 20px auto
+  display: block
+  @extend %p
+  @include rounded(30px)
+
+  &:hover,
+  &:active,
+  &:active:hover,
+  &:active:focus,
+  &:focus,
+  &:visited
+    background:
+      color: transparent
+    border: 1px solid $color_primary_soft
+    color: $color_primary_soft
+    @extend %p
+    @include rounded(30px)
