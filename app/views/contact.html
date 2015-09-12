@@ -3,20 +3,20 @@
         Entre em contato
         <span class="line"></span>
     </h1>
-    <div class="form-group">
-        <label for="name" ng-class="{'active': contact.name.length > 0}">Nome</label>
+    <div class="form-group" ng-class="{'active': contact.name.length > 0}">
+        <label for="name">Nome</label>
         <input class="form-control" id="name" ng-model="contact.name" />
     </div>
-    <div class="form-group">
-        <label for="phone" ng-class="{'active': contact.phone.length > 0}">Telefone</label>
+    <div class="form-group" ng-class="{'active': contact.phone.length > 0}">
+        <label for="phone">Telefone</label>
         <input class="form-control" id="phone" ng-model="contact.phone" />
     </div>
-    <div class="form-group">
-        <label for="email" ng-class="{'active': contact.email.length > 0}">Email</label>
+    <div class="form-group" ng-class="{'active': contact.email.length > 0}">
+        <label for="email">Email</label>
         <input class="form-control" id="email" ng-model="contact.email" />
     </div>
-    <div class="form-group">
-        <label for="message" ng-class="{'active': contact.message.length > 0}">Mensagem</label>
+    <div class="form-group" ng-class="{'active': contact.message.length > 0}">
+        <label for="message">Mensagem</label>
         <textarea class="form-control" id="message" ng-model="contact.message"></textarea>
     </div>
     <div class="form-group">

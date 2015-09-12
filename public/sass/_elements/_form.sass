@@ -2,31 +2,40 @@
   .form-group
     position: relative
     margin: 40px 0
+
     input,
     textarea,
     select
+      @extend %p
+      @extend %nofocus
+      @extend %noshadow
       background:
         color: transparent
       border:
         top: transparent
         left: transparent
         right: transparent
-        bottom: 1px solid $color_primary
-      color: $color_soft
-      @extend %p
-      @extend %nofocus
-      @extend %noshadow
+        bottom: 1px solid $color-primary
+      color: $color-soft
+
+    &.active
+      label
+        top: -20px
+        font:
+          size: 1em
+        color: $color-primary
+
+      input,
+      textarea,
+      select
+        border:
+          bottom: 1px solid $color-secondary-soft
 
     label
       position: absolute
-      color: $color_soft
+      color: $color-soft
       font:
         weight: 300
         size: 1.4em
       left: 10px
 
-      &.active
-        top: -20px
-        font:
-          size: 1em
-        color: $color_primary
