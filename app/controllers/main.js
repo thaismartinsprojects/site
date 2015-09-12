@@ -1,8 +1,8 @@
 'use strict';
 
 var app = angular.module('thaisMartins');
-app.controller('MainCtrl', ['$scope', '$interval', 'SlideService',
-                    function ($scope, $interval, SlideService) {
+app.controller('MainCtrl', ['$scope', '$interval', 'SlideService', 'WorksService',
+                    function ($scope, $interval, SlideService, WorksService) {
 
     var slides = SlideService.getItems();
     var id = 0;
@@ -15,4 +15,8 @@ app.controller('MainCtrl', ['$scope', '$interval', 'SlideService',
 
     $interval(showCurrentSlide, 5000);
     showCurrentSlide();
+
+    $scope.works = WorksService.getItems();
+    $scope.showWork = false;
+    $scope.showForm = false;
 }]);

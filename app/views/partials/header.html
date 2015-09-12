@@ -12,10 +12,11 @@
         <p class="back">voltar</p>
     </nav>
 </header>
+
 <section id="full-menu" class="col-xs-6" ng-class="{'active': activeMenu}">
     <ul>
         <li ng-repeat="item in menu">
-            <a href="#{{item.slug}}" ng-click="toogleMenu()">
+            <a href="#/#{{item.slug}}" ng-click="toogleMenu()">
                 {{item.name}}
             </a>
             <span></span>

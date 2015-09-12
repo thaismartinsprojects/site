@@ -3,3 +3,32 @@
 
 .nomargin
   margin: 0
+
+%page
+  height: 100%
+  min-height: 650px
+  overflow: hidden
+  padding:
+    top: $height-header + $padding-top-page
+    left: $padding-page-side
+    right: $padding-page-side
+
+  @media #{$xsmall-max}
+    padding:
+      left: $padding-page-side-mobile
+      right: $padding-page-side-mobile
+    min-height: 500px
+
+%noshadow
+  -webkit-box-shadow: none!important
+  -moz-box-shadow: none!important
+  box-shadow: none!important
+
+%nofocus
+  outline: 0
+  border:
+    color: inherit
+    width: 0
+  -moz-box-shadow: none
+  -webkit-box-shadow: none
+  box-shadow: none

@@ -1,0 +1,32 @@
+footer
+  position: fixed
+  bottom: 0
+  padding: 10px 0
+  z-index: 2
+  font:
+    size: .8em
+    weight: 400
+  background:
+    color: $color-primary
+
+  @media #{$xsmall-max}
+    text-align: center
+
+  .social
+    @media #{$xsmall-max}
+      float: none!important
+
+    li
+      margin: 0
+      display: inline-block
+
+      a
+        @include rounded(10px)
+        padding: 5px 8px
+        background:
+          color: $color-secondary
+        color: $color-soft
+
+        span
+          font:
+            size: .7em

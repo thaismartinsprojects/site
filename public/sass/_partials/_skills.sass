@@ -13,13 +13,17 @@
         weight: 300
         size: .8em
       display: inline-block
-      min-width: 120px
+      min-width: 110px
       margin: 5px
       padding: 10px
       background:
         color: $color-primary
       border: 1px solid $color-primary
       color: $color-secondary
+
+      @media #{$xsmall-max}
+        font:
+          size: .6em
 
       i
         margin:

@@ -4,7 +4,7 @@ var app = angular.module('thaisMartins');
 app.factory('WorksService', function () {
 
     var items = [
-        {id: 1, name: 'Viva Design Hostel', shortdescription: 'Site institucional', path: 'vivahostel', images: [
+        {id: 1, name: 'Viva Design Hostel', shortdescription: 'Criação do site institucional', path: 'vivahostel', images: [
             {id: 1, name: 'Home', image: 'home.jpg'},
             {id: 2, name: 'Conteúdo Interno', image: 'conteudo.jpg'},
             {id: 3, name: 'Listagem de Fotos', image: 'fotos.jpg'},
@@ -15,7 +15,11 @@ app.factory('WorksService', function () {
             {id: 2, name: 'Busca', image: 'busca.jpg'},
             {id: 3, name: 'Listagem de Estabelecimentos', image: 'lista.jpg'},
             {id: 4, name: 'Conteúdo Interno', image: 'detalhes.jpg'}
-        ], tags: ['design'], url: ''}
+        ], tags: ['design'], url: ''},
+        {id: 2, name: 'Mão na Roda', shortdescription: 'Criação do frontend', path: 'maonaroda', images: [
+            {id: 1, name: 'Home', image: 'home.jpg'},
+            {id: 2, name: 'Orçamento', image: 'orcamento.jpg'},
+        ], tags: ['html', 'css', 'javascript', 'jquery', 'bootstrap'], url: ''}
     ];
 
     return {

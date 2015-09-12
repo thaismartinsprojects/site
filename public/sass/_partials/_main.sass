@@ -1,10 +1,5 @@
 #main
-  height: 100%
-  padding:
-    top: $height-header + $padding-top-page
-    left: $padding-page-side
-    right: $padding-page-side
-  position: absolute
+  @extend %page
   background:
     image: url("../images/background-main.jpg")
     repeat: repeat
@@ -15,14 +10,23 @@
         top: 100px
       color: $color-soft
 
+      @media #{$xsmall-max}
+        margin:
+          top: 0
+        padding: 40px 0
+
       h1
         @extend %h1
-        text-align: left
+
+        @media #{$xsmall}
+          text-align: left
 
       .line
         @extend %line
-        margin:
-          left: 0
+
+        @media #{$xsmall}
+          margin:
+            left: 0
 
       p
         @extend %p
@@ -32,3 +36,7 @@
         width: 90%
         max-width: 800px
         margin: 0 auto
+
+        @media #{$xsmall-max}
+          width: 70%
+          display: block

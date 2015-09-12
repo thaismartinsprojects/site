@@ -1,12 +1,4 @@
-<div id="main" class="col-xs-12">
-    <div id="slide">
-        <div class="image col-xs-12 col-sm-7 pull-right">
-            <img ng-src="public/images/slides/{{slide.image}}" alt="{{slide.name}}" alt="{{slide.name}}" />
-        </div>
-        <div class="content col-xs-12 col-sm-5 pull-left">
-            <h1>{{slide.name}}</h1>
-            <span class="line"></span>
-            <p>{{slide.description}}</p>
-        </div>
-    </div>
-</div>
+<div ng-include="'app/views/partials/home.html'"></div>
+<div ng-include="'app/views/partials/about.html'"></div>
+<div ng-include="'app/views/partials/works.html'"></div>
+<div ng-include="'app/views/partials/contact.html'"></div>
