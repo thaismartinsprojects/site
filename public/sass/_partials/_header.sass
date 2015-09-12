@@ -11,38 +11,21 @@ header
   .logo
     padding: 0
 
-    .box
-      position: relative
-      width: 40px
-      height: 40px
-      margin: 15px
-      background: $color-soft
-      border-radius: 50% / 10%
-      text-indent: .1em
-      float: left
-      display: none
-
-      &:before
-        content: ''
-        position: absolute
-        top: 10%
-        bottom: 10%
-        right: -5%
-        left: -5%
-        background: inherit
-        border-radius: 5% / 50%
-
     .title
       float: left
       background:
         color: $color-secondary
       letter-spacing: -1px
-      padding: 10px 15px 10px 35px
+      padding: 10px 15px 10px 45px
       margin:
-        top: 10px
+        top: 15px
       font:
-        size: 1.8em
+        size: 1.3em
       color: $color-soft
+
+      @media #{$xsmall-max}
+        padding:
+          left: 25px
 
   nav
     color: $color-secondary
@@ -51,6 +34,7 @@ header
       float: right
       font:
         weight: 300
+        size: 0.8em
 
       &.back
         display: none
@@ -58,7 +42,7 @@ header
       &.menu,
       &.back
         margin:
-          top: 27px
+          top: 30px
           right: 10px
 
     ul
@@ -91,7 +75,7 @@ header
 
       ul
         margin:
-          top: 23px
+          top: 25px
 
         li
           &:first-child
