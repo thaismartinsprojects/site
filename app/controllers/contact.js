@@ -4,4 +4,5 @@ var app = angular.module('thaisMartins');
 app.controller('ContactCtrl', ['$scope',
                     function ($scope) {
 
+    $scope.showForm = false;
 }]);

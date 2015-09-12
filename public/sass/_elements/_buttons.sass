@@ -1,15 +1,18 @@
-.btn-primary
+%button
   @extend %p
   @include rounded(30px)
+  font:
+    weight: 300
+  min-width: 150px
+  margin: 20px auto
+  display: block
+
+.btn-primary
+  @extend %button
   background:
     color: transparent
   border: 1px solid $color-soft
   color: $color-soft
-  font:
-    weight: 100
-  width: 150px
-  margin: 20px auto
-  display: block
 
   &:hover,
   &:active,
@@ -17,30 +20,41 @@
   &:active:focus,
   &:focus,
   &:visited:hover
-    @extend %p
-    @include rounded(30px)
     background:
       color: $color-primary
     border: 1px solid $color-primary
     color: $color-secondary
-    font:
-      weight: 300
+
+  &:visited
+    color: $color-soft
+
+.btn-primary-fill
+  @extend %button
+  background:
+    color: $color-primary
+  border: 1px solid $color-primary
+  color: $color-secondary
+
+  &:hover,
+  &:active,
+  &:active:hover,
+  &:active:focus,
+  &:focus,
+  &:visited:hover
+    background:
+      color: transparent
+    border: 1px solid $color-soft
+    color: $color-soft
 
   &:visited
     color: $color-soft
 
 .btn-secondary
-  @extend %p
-  @include rounded(30px)
+  @extend %button
   background:
     color: transparent
   border: 1px solid $color-secondary-soft
   color: $color-secondary
-  font:
-    weight: 100
-  width: 150px
-  margin: 20px auto
-  display: block
 
   &:hover,
   &:active,
@@ -48,14 +62,10 @@
   &:active:focus,
   &:focus,
   &:visited:hover
-    @extend %p
-    @include rounded(30px)
     background:
       color: $color-secondary
     border: 1px solid $color-secondary
     color: $color-soft
-    font:
-      weight: 300
 
   &:visited
     color: $color-secondary

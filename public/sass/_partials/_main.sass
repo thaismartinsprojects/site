@@ -11,22 +11,24 @@
 
   #slide
     .content
-      float: left
       margin:
-        top: 150px
+        top: 100px
       color: $color-soft
 
       h1
         @extend %h1
+        text-align: left
 
       .line
         @extend %line
+        margin:
+          left: 0
 
       p
         @extend %p
 
     .image
-      float: right
-
       img
-        max-width: 100%
+        width: 90%
+        max-width: 800px
+        margin: 0 auto

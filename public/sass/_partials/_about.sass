@@ -1,0 +1,30 @@
+#about
+  height: 100%
+  padding:
+    top: $height-header + $padding-top-page
+    left: $padding-page-side
+    right: $padding-page-side
+  position: absolute
+
+  @media #{$xsmall-max}
+    margin:
+      left: $padding-page-side-mobile
+      right: $padding-page-side-mobile
+  h1
+    @extend %h1
+
+    .line
+      @extend %line
+
+  p
+    @extend %p
+    font:
+      size: 1.3em
+    margin: 20px 0
+    line-height: 1.6em
+    text:
+      align: center
+
+  span
+    font:
+      weight: 600

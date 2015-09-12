@@ -1,12 +1,12 @@
 <div id="main" class="col-xs-12">
     <div id="slide">
-        <div class="content col-xs-12 col-sm-6">
+        <div class="image col-xs-12 col-sm-7 pull-right">
+            <img ng-src="public/images/slides/{{slide.image}}" alt="{{slide.name}}" alt="{{slide.name}}" />
+        </div>
+        <div class="content col-xs-12 col-sm-5 pull-left">
             <h1>{{slide.name}}</h1>
             <span class="line"></span>
             <p>{{slide.description}}</p>
-        </div>
-        <div class="image col-xs-12 col-sm-6">
-            <img ng-src="public/images/slides/{{slide.image}}" alt="{{slide.name}}" alt="{{slide.name}}" />
         </div>
     </div>
 </div>

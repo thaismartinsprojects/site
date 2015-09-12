@@ -6,7 +6,7 @@ app.factory('MenuService', function () {
     var items = [
         {id: 1, name: 'Home', slug: '/'},
         {id: 2, name: 'Sobre Mim', slug: 'about'},
-        {id: 3, name: 'Portfolio', slug: 'works'},
+        {id: 3, name: 'Meus Trabalhos', slug: 'works'},
         {id: 4, name: 'Contato', slug: 'contact'}
     ];
 

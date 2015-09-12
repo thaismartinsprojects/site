@@ -8,20 +8,32 @@
   background:
     color: $color-secondary
 
-  h1
-    @extend %h1
-    font:
-      weight: 100
-    margin:
-      top: 25px
-      bottom: 20px
-    color: $color-soft
-    text-align: center
+  .form,
+  .landing
+    h1
+      @extend %h1
+      color: $color-soft
 
-    .line
-      @extend %line
-      background:
-        color: $color-primary
+      .line
+        @extend %line
+
+      span
+        font:
+          weight: 600
+
+  .landing
+    h1
       margin:
-        left: auto
-        right: auto
+        top: 120px
+
+    .arrow
+      width: 60px
+      margin: 40px auto
+      -webkit-animation: up-down 1.2s infinite
+      animation: up-down 1.2s infinite
+      img
+        width: 100%
+
+    .btn
+      min-width: 300px
+      padding: 15px 0

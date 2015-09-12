@@ -10,7 +10,7 @@ blockquote:before, blockquote:after, q:before, q:after { content: ""; content: n
 
 table { border-collapse: collapse; border-spacing: 0; }
 
-body { font-family: "Yantramanav"; font-weight: 200; line-height: 1; }
+body { font-family: "Raleway"; font-weight: 300; line-height: 1; }
 
 a:hover { text-decoration: none; }
 
@@ -58,30 +58,39 @@ a:hover { text-decoration: none; }
 
 .nomargin { margin: 0; }
 
-#main #slide .content h1, #contact h1 { font-size: 2.6em; font-weight: 300; }
+@keyframes up-down { 0% { transition: transform 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95); transform: translateX(0px) translateY(-10px); }
+  50% { transition: transform 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95); transform: translateX(0px) translateY(25px); }
+  100% { transition: transform 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95); transform: translateX(0px) translateY(-10px); } }
+#main #slide .content h1, #about h1, #works h1, #contact .form h1, #contact .landing h1 { font-size: 2.4em; font-weight: 300; text-align: center; margin-top: 25px; margin-bottom: 20px; }
 
-.form .form-group input, .form .form-group textarea, .form .form-group select, .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:focus, .btn-primary:visited:hover, .btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:active:hover, .btn-secondary:active:focus, .btn-secondary:focus, .btn-secondary:visited:hover, #main #slide .content p { font-size: 1.2em; }
+.form .form-group input, .form .form-group textarea, .form .form-group select, .btn-primary, .btn-primary-fill, .btn-secondary, #main #slide .content p, #about p { font-size: 1.2em; line-height: 1.2em; display: block; clear: both; }
 
-#main #slide .content .line, #contact h1 .line { display: block; height: 1px; width: 150px; margin: 10px 0 40px 0; background-color: #ffde00; }
+#main #slide .content .line, #about h1 .line, #works h1 .line, #contact .form h1 .line, #contact .landing h1 .line { display: block; height: 1px; width: 150px; margin: 10px auto 40px auto; background-color: #ffde00; }
 
 .form .form-group { position: relative; margin: 40px 0; }
-.form .form-group input, .form .form-group textarea, .form .form-group select { background-color: transparent; border-top: transparent; border-left: transparent; border-right: transparent; border-bottom: 1px solid #ffde00; color: #FFFFFF; }
-.form .form-group.active label { top: -20px; font-size: 1em; color: #ffde00; }
-.form .form-group.active input, .form .form-group.active textarea, .form .form-group.active select { border-bottom: 1px solid rgba(41, 50, 61, 0.3); }
-.form .form-group label { position: absolute; color: #FFFFFF; font-weight: 300; font-size: 1.4em; left: 10px; }
+.form .form-group input, .form .form-group textarea, .form .form-group select { background-color: transparent; border-top: transparent; border-left: transparent; border-right: transparent; border-bottom: 1px solid #ffde00; color: #FFFFFF; resize: none; }
+.form .form-group.active label { top: -20px; font-size: 0.9em; color: #ffde00; }
+.form .form-group.active input, .form .form-group.active textarea, .form .form-group.active select { border-bottom: 1px solid #4e6274; }
+.form .form-group label { position: absolute; color: #FFFFFF; font-weight: 300; font-size: 1.3em; left: 10px; }
 
-.btn-primary { -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; background-color: transparent; border: 1px solid #FFFFFF; color: #FFFFFF; font-weight: 100; width: 150px; margin: 20px auto; display: block; }
-.btn-primary:hover, .btn-primary:active, .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:focus, .btn-primary:visited:hover { -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; background-color: #ffde00; border: 1px solid #ffde00; color: #29323d; font-weight: 300; }
+.btn-primary, .btn-primary-fill, .btn-secondary { -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; font-weight: 300; min-width: 150px; margin: 20px auto; display: block; }
+
+.btn-primary { background-color: transparent; border: 1px solid #FFFFFF; color: #FFFFFF; }
+.btn-primary:hover, .btn-primary:active, .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:focus, .btn-primary:visited:hover { background-color: #ffde00; border: 1px solid #ffde00; color: #29323d; }
 .btn-primary:visited { color: #FFFFFF; }
 
-.btn-secondary { -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; background-color: transparent; border: 1px solid rgba(41, 50, 61, 0.3); color: #29323d; font-weight: 100; width: 150px; margin: 20px auto; display: block; }
-.btn-secondary:hover, .btn-secondary:active, .btn-secondary:active:hover, .btn-secondary:active:focus, .btn-secondary:focus, .btn-secondary:visited:hover { -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; background-color: #29323d; border: 1px solid #29323d; color: #FFFFFF; font-weight: 300; }
+.btn-primary-fill { background-color: #ffde00; border: 1px solid #ffde00; color: #29323d; }
+.btn-primary-fill:hover, .btn-primary-fill:active, .btn-primary-fill:active:hover, .btn-primary-fill:active:focus, .btn-primary-fill:focus, .btn-primary-fill:visited:hover { background-color: transparent; border: 1px solid #FFFFFF; color: #FFFFFF; }
+.btn-primary-fill:visited { color: #FFFFFF; }
+
+.btn-secondary { background-color: transparent; border: 1px solid #4e6274; color: #29323d; }
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary:active:hover, .btn-secondary:active:focus, .btn-secondary:focus, .btn-secondary:visited:hover { background-color: #29323d; border: 1px solid #29323d; color: #FFFFFF; }
 .btn-secondary:visited { color: #29323d; }
 
 header { height: 70px; position: fixed !important; padding: 0 !important; margin: 0 !important; z-index: 2; color: #FFFFFF; background-color: #ffde00; }
 header .logo { padding: 0; }
 header .logo .title { float: left; background-color: #29323d; letter-spacing: -1px; padding: 10px 15px 10px 45px; margin-top: 15px; font-size: 1.3em; color: #FFFFFF; }
-@media (max-width: 481px) { header .logo .title { padding-left: 25px; } }
+@media (max-width: 481px) { header .logo .title { padding-left: 15px; } }
 header nav { color: #29323d; }
 header nav p { float: right; font-weight: 300; font-size: 0.8em; }
 header nav p.back { display: none; }
@@ -98,19 +107,30 @@ header.active nav ul li:last-child { -ms-transform: rotate(-20deg); -webkit-tran
 #full-menu { display: none; background-color: #ffde00; width: 100%; height: 100%; z-index: 2; position: absolute; top: 0; left: 0; text-align: center; }
 #full-menu.active { display: block; }
 #full-menu ul { margin-top: 150px; width: 100%; }
-#full-menu ul li { padding: 20px; width: 50%; margin: 0 auto; font-weight: 300; }
-@media (max-width: 481px) { #full-menu ul li { width: 80%; } }
-#full-menu ul li span { display: block; margin: 10px auto; width: 10%; height: 1px; background-color: #E1C900; }
+#full-menu ul li { padding: 20px; width: 50%; margin: 0 auto; font-weight: 300; font-size: 1.3em; }
+@media (max-width: 481px) { #full-menu ul li { width: 90%; } }
+#full-menu ul li span { display: block; margin: 10px auto; width: 20%; height: 1px; background-color: #E1C900; }
 #full-menu ul li a { color: #29323d; }
 #full-menu ul li:hover { letter-spacing: 2px; font-weight: 400; }
-#full-menu ul li:hover span { width: 30%; }
+#full-menu ul li:hover span { width: 40%; }
+
+.skills { margin-bottom: 80px; width: 100%; }
+.skills ul { text-align: center; width: 100%; }
+.skills ul li { -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; font-weight: 300; font-size: 0.8em; display: inline-block; min-width: 120px; margin: 5px; padding: 10px; background-color: #ffde00; border: 1px solid #ffde00; color: #29323d; }
+.skills ul li i { margin-right: 5px; }
 
 #main { height: 100%; padding-top: 90px; padding-left: 50px; padding-right: 50px; position: absolute; background-image: url("../images/background-main.jpg"); background-repeat: repeat; }
-#main #slide .content { float: left; margin-top: 150px; color: #FFFFFF; }
-#main #slide .image { float: right; }
-#main #slide .image img { max-width: 100%; }
+#main #slide .content { margin-top: 100px; color: #FFFFFF; }
+#main #slide .content h1 { text-align: left; }
+#main #slide .content .line { margin-left: 0; }
+#main #slide .image img { width: 90%; max-width: 800px; margin: 0 auto; }
 
-#works { height: 100%; padding-top: 90px; padding-left: 0; padding-right: 0; position: absolute; background-color: #29323d; }
+#about { height: 100%; padding-top: 90px; padding-left: 50px; padding-right: 50px; position: absolute; }
+@media (max-width: 481px) { #about { margin-left: 15px; margin-right: 15px; } }
+#about p { font-size: 1.3em; margin: 20px 0; line-height: 1.6em; text-align: center; }
+#about span { font-weight: 600; }
+
+#works { height: 100%; padding-top: 90px; padding-left: 0; padding-right: 0; position: absolute; background-color: #F9F9F9; }
 #works .list { width: 100%; }
 #works .list .box { cursor: pointer; position: relative; }
 #works .list .box .image { height: 160px; overflow: hidden; }
@@ -118,12 +138,16 @@ header.active nav ul li:last-child { -ms-transform: rotate(-20deg); -webkit-tran
 #works .list .box .details { position: absolute; text-align: center; background-color: rgba(255, 222, 0, 0.9); height: 160px; width: 100%; top: 0; cursor: auto; font-weight: 400; }
 #works .list .box .details h1 { font-size: 1.4em; margin: 25px 0 10px 0; }
 #works .list .box .details ul.tags li { display: inline-block; font-size: 0.8em; margin: 0 2px; }
-#works .list .box .details ul.tags li a { color: rgba(41, 50, 61, 0.3); }
+#works .list .box .details ul.tags li a { color: #4e6274; }
 #works .list .box .details ul.buttons { text-align: center; }
 #works .list .box .details ul.buttons li { display: inline-block; }
 
 #contact { height: 100%; padding-top: 90px; padding-left: 50px; padding-right: 50px; position: absolute; background-color: #29323d; }
-#contact h1 { font-weight: 100; margin-top: 25px; margin-bottom: 20px; color: #FFFFFF; text-align: center; }
-#contact h1 .line { background-color: #ffde00; margin-left: auto; margin-right: auto; }
+#contact .form h1, #contact .landing h1 { color: #FFFFFF; }
+#contact .form h1 span, #contact .landing h1 span { font-weight: 600; }
+#contact .landing h1 { margin-top: 120px; }
+#contact .landing .arrow { width: 60px; margin: 40px auto; -webkit-animation: up-down 1.2s infinite; animation: up-down 1.2s infinite; }
+#contact .landing .arrow img { width: 100%; }
+#contact .landing .btn { min-width: 300px; padding: 15px 0; }
 
 /*# sourceMappingURL=style.css.map */

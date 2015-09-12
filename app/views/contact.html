@@ -1,25 +1,32 @@
 <div id="contact" class="form col-xs-12">
-    <h1>
-        Entre em contato
-        <span class="line"></span>
-    </h1>
-    <div class="form-group" ng-class="{'active': contact.name.length > 0}">
-        <label for="name">Nome</label>
-        <input class="form-control" id="name" ng-model="contact.name" />
+    <div class="landing" ng-show="!showForm">
+        <h1>Solicite um <span>orçamento sem compromisso</span> <br />e entenda melhor como <span>posso ajudar sua empresa</span></h1>
+        <div class="arrow">
+            <img src="public/images/arrow.png" alt="Entre em contato" title="Entre em contato">
+        </div>
+        <button class="btn btn-primary-fill" ng-click="showForm = true">Entre em contato</button>
     </div>
-    <div class="form-group" ng-class="{'active': contact.phone.length > 0}">
-        <label for="phone">Telefone</label>
-        <input class="form-control" id="phone" ng-model="contact.phone" />
-    </div>
-    <div class="form-group" ng-class="{'active': contact.email.length > 0}">
-        <label for="email">Email</label>
-        <input class="form-control" id="email" ng-model="contact.email" />
-    </div>
-    <div class="form-group" ng-class="{'active': contact.message.length > 0}">
-        <label for="message">Mensagem</label>
-        <textarea class="form-control" id="message" ng-model="contact.message"></textarea>
-    </div>
-    <div class="form-group">
-        <button class="btn btn-primary">Enviar</button>
+    <div class="form" ng-show="showForm">
+        <h1>Entre em contato <span class="line"></span></h1>
+
+        <div class="form-group" ng-class="{'active': contact.name.length > 0}">
+            <label for="name">Nome</label>
+            <input class="form-control" id="name" ng-model="contact.name" />
+        </div>
+        <div class="form-group" ng-class="{'active': contact.phone.length > 0}">
+            <label for="phone">Telefone</label>
+            <input class="form-control" id="phone" ng-model="contact.phone" />
+        </div>
+        <div class="form-group" ng-class="{'active': contact.email.length > 0}">
+            <label for="email">Email</label>
+            <input class="form-control" id="email" ng-model="contact.email" />
+        </div>
+        <div class="form-group" ng-class="{'active': contact.message.length > 0}">
+            <label for="message">Mensagem</label>
+            <textarea class="form-control" id="message" ng-model="contact.message"></textarea>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary">Enviar</button>
+        </div>
     </div>
 </div>
