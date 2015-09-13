@@ -19,9 +19,10 @@ app.controller('MainCtrl', ['$scope', '$interval', 'SlideService', 'WorksService
     $scope.works = WorksService.getItems();
     $scope.showWork = false;
     $scope.showForm = false;
-    $scope.skillCurrent = 1;
+    $scope.seeWork = false;
     $scope.showAllSkills = false;
-
+    $scope.skillCurrent = 1;
+    $scope.currentWork = WorksService.getItem(1);
     $scope.nextSkill = function() {
 
         var next = ($scope.skillCurrent + 1);
@@ -42,6 +43,11 @@ app.controller('MainCtrl', ['$scope', '$interval', 'SlideService', 'WorksService
 
     if(window.isMobile){
         $scope.showAllSkills = true;
+    }
+
+    $scope.seeWork = function(id){
+        $scope.currentWork = WorksService.getItem((id - 1));
+        $scope.viewWork = true;
     }
 
 }]);

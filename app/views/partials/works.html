@@ -1,6 +1,6 @@
 <div id="works" class="col-xs-12">
-
-    <h1>Meus Trabalhos <span class="line"></span></h1>
+    <a name="works"></a>
+    <h1>Meus Trabalhos {{seeWork}}<span class="line"></span></h1>
 
     <div class="list">
         <div class="col-xxs-12 col-xs-6 col-sm-4 nopadding" ng-repeat="work in works"
@@ -14,19 +14,38 @@
                 <div class="details" ng-show="showWork == {{work.id}}">
                     <h1>{{work.name}}</h1>
                     <p>{{work.shortdescription}}</p>
-                    <!--<ul class="tags">-->
-                        <!--<li ng-repeat="tag in work.tags"><a href="#/tags/{{tag}}">{{tag | uppercase}}</a></li>-->
-                    <!--</ul>-->
                     <ul class="buttons">
                         <li>
-                            <button class="btn btn-secondary" ng-click="viewWork = work.id"><i class="fa fa-search-plus"></i></button>
+                            <a class="btn btn-secondary" ng-click="seeWork(work.id)"><i class="fa fa-search-plus"></i></a>
                         </li>
                         <li>
-                            <a class="btn btn-secondary" href="{{work.url}}" ng-if="work.url" target="_blank    "><i class="fa fa-external-link"></i></a>
+                            <a class="btn btn-secondary" href="{{work.url}}" ng-if="work.url" target="_blank"><i class="fa fa-external-link"></i></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<div id="full-work" class="col-xs-12" ng-show="viewWork">
+    <div class="col-xs-6 col-xxs-12 pull-right">
+        <h1>{{currentWork.name}}</h1>
+        <ul class="tags">
+            <li ng-repeat="tag in currentWork.tags">{{tag | uppercase}}</li>
+        </ul>
+        <p>{{currentWork.shortdescription}}</p>
+    </div>
+    <div class="col-xs-6 col-xxs-12">
+        <ul class="photos">
+            <li ng-repeat="img in currentWork.images" class="col-xs-6 col-xxs-12">
+                <a href="#">
+                    <img src="public/images/works/{{currentWork.path}}/{{img.image}}" alt="img.name" title="img.name">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="button col-xxs-12">
+        <a ng-click="viewWork == false" class="btn btn-secondary">voltar <i class="fa fa-arrow-right"></i></a>
     </div>
 </div>

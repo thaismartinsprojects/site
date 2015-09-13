@@ -8,6 +8,9 @@ header
   background:
     color: $color-primary
 
+  @media #{$xsmall-max}
+    height: 50px
+
   .logo
     padding: 0
 
@@ -26,6 +29,8 @@ header
       @media #{$xsmall-max}
         padding:
           left: 15px
+        margin:
+          top: 4px
 
   nav
     color: $color-secondary
@@ -45,12 +50,21 @@ header
           top: 30px
           right: 10px
 
+      &.menu
+        @media #{$xsmall-max}
+          margin:
+            top: 17px
+
     ul
       float: right
       cursor: pointer
       margin:
         top: 20px
         right: 10px
+
+      @media #{$xsmall-max}
+        margin:
+          top: 10px
 
       li
         background:
@@ -70,12 +84,20 @@ header
         &.back
           display: block
 
+          @media #{$xsmall-max}
+            margin:
+              top: 17px
+
         &.menu
           display: none
 
       ul
         margin:
           top: 25px
+
+        @media #{$xsmall-max}
+          margin:
+            top: 13px
 
         li
           &:first-child
