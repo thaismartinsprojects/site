@@ -1,7 +1,7 @@
 <header class="col-xs-12"  ng-class="{'active': activeMenu}">
-    <section class="logo col-xs-6">
+    <div class="logo col-xs-6">
         <a class="title" href="#/">Thais Martins</a>
-    </section>
+    </div>
     <nav class="col-xs-6">
         <ul ng-click="toogleMenu()">
             <li></li>
@@ -13,7 +13,7 @@
     </nav>
 </header>
 
-<section id="full-menu" class="col-xs-6" ng-class="{'active': activeMenu}">
+<div id="full-menu" class="col-xs-6" ng-class="{'active': activeMenu}">
     <ul>
         <li ng-repeat="item in menu">
             <a href="#/#{{item.slug}}" ng-click="toogleMenu()">
@@ -22,4 +22,4 @@
             <span></span>
         </li>
     </ul>
-</section>
+</div>

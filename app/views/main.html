@@ -1,4 +1,20 @@
-<div ng-include="'app/views/partials/home.html'"></div>
-<div ng-include="'app/views/partials/about.html'"></div>
-<div ng-include="'app/views/partials/works.html'"></div>
-<div ng-include="'app/views/partials/contact.html'"></div>
+<section ng-include="'app/views/partials/home.html'"></section>
+<section ng-include="'app/views/partials/about.html'"></section>
+<section ng-include="'app/views/partials/works.html'"></section>
+<section ng-include="'app/views/partials/contact.html'"></section>
+
+<script>
+    window.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    $(function() {
+        if(!window.isMobile) {
+
+            $('head').append('<link rel="stylesheet" href="public/css/onepage-scroll.css" type="text/css" />');
+
+            $(".pages").onepage_scroll({
+                sectionContainer: "section"
+            });
+        }
+
+    });
+</script>

@@ -1,21 +1,41 @@
 #about
   @extend %page
 
-  h1
-    @extend %h1
+  .list
+    padding: 85px
 
-    .line
-      @extend %line
+    @media #{$xsmall-max}
+      padding: 0
 
-  p
-    @extend %p
-    font:
-      size: 1.3em
-    margin: 20px 0
-    line-height: 1.6em
-    text:
-      align: center
+    h1
+      @extend %h1
 
-  span
-    font:
-      weight: 600
+      .line
+        @extend %line
+
+    p
+      @extend %p
+      font:
+        size: 1.3em
+      margin: 20px 0
+      line-height: 1.6em
+      text:
+        align: center
+
+    span
+      font:
+        weight: 600
+
+    .prev,
+    .next
+      margin: 0 auto
+      position: absolute
+      cursor: pointer
+      top: 40%
+      font-size: 3em
+
+    .prev
+      left: 25px
+
+    .next
+      right: 25px

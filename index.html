@@ -30,11 +30,11 @@
         <p>Você está usndo um navegador <strong>desatualizado</strong>. Por favor, <a href="http://browsehappy.com/">atualize-o</a> para ter uma melhor experiência.</p>
     <![endif]-->
 
-    <div class="container-fluid">
-        <div ng-include="'app/views/partials/header.html'"></div>
+    <div ng-include="'app/views/partials/header.html'"></div>
+    <div class="container-fluid pages">
         <main ng-view></main>
-        <div ng-include="'app/views/partials/footer.html'"></div>
     </div>
+    <div ng-include="'app/views/partials/footer.html'"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
@@ -42,6 +42,8 @@
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="public/js/jquery.onepage-scroll.min.js"></script>
 
     <script src="app/app.js"></script>
 

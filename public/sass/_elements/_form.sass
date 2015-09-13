@@ -12,19 +12,23 @@
       background:
         color: transparent
       border:
-        top: transparent
-        left: transparent
-        right: transparent
-        bottom: 1px solid $color-primary
-        width: 1px !important
+        bottom:
+          color: $color-primary !important
+          style: solid
+          width: 1px !important
       color: $color-soft
       resize: none
+
+    label
+      @media #{$xsmall-max}
+        font:
+          size: 1em !important
 
     &.active
       label
         top: -20px
         font:
-          size: .9em
+          size: .8em
         color: $color-primary
 
       input,

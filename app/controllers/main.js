@@ -19,4 +19,29 @@ app.controller('MainCtrl', ['$scope', '$interval', 'SlideService', 'WorksService
     $scope.works = WorksService.getItems();
     $scope.showWork = false;
     $scope.showForm = false;
+    $scope.skillCurrent = 1;
+    $scope.showAllSkills = false;
+
+    $scope.nextSkill = function() {
+
+        var next = ($scope.skillCurrent + 1);
+        if(next > 5)
+            next = 1;
+
+        $scope.skillCurrent = next;
+    };
+
+    $scope.prevSkill = function() {
+
+        var next = ($scope.skillCurrent - 1);
+        if(next == 0)
+            next = 5;
+
+        $scope.skillCurrent = next;
+    };
+
+    if(window.isMobile){
+        $scope.showAllSkills = true;
+    }
+
 }]);
