@@ -1,9 +1,9 @@
 $width:  100%
 
-.col-xxs-show
+.visible-xxs
   display: none
 
-.col-xxs-hidden
+.hidden-xxs
   display: block
 
 @mixin generateOffset($col)
@@ -26,25 +26,24 @@ $width:  100%
     .col-xxs-offset-#{$i}
       @include generateOffset($i)
 
-  .hidden-xxs
-    display: none
+  .col-xs-12,
+  .col-xs-11,
+  .col-xs-10,
+  .col-xs-9,
+  .col-xs-8,
+  .col-xs-7,
+  .col-xs-6,
+  .col-xs-5,
+  .col-xs-4,
+  .col-xs-3,
+  .col-xs-2,
+  .col-xs-1
+    padding:
+      left: 5px
+      right: 5px
 
   .visible-xxs
     display: block !important
 
-@media #{$small-max}
-.col-xs-12,
-.col-xs-11,
-.col-xs-10,
-.col-xs-9,
-.col-xs-8,
-.col-xs-7,
-.col-xs-6,
-.col-xs-5,
-.col-xs-4,
-.col-xs-3,
-.col-xs-2,
-.col-xs-1
-  padding:
-    left: 5px
-    right: 5px
+  .hidden-xxs
+    display: none !important

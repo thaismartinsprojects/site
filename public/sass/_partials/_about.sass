@@ -28,11 +28,14 @@
 
     .prev,
     .next
+      @include rounded()
       margin: 0 auto
       position: absolute
       cursor: pointer
       top: 40%
-      font-size: 3em
+      font-size: 1em
+      padding: 10px
+      border: 1px solid $color-secondary-soft
 
     .prev
       left: 25px

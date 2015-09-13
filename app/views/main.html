@@ -8,13 +8,16 @@
 
     $(function() {
         if(!window.isMobile) {
-
             $('head').append('<link rel="stylesheet" href="public/css/onepage-scroll.css" type="text/css" />');
-
             $(".pages").onepage_scroll({
                 sectionContainer: "section"
             });
         }
 
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'showImageNumberLabel': false
+        });
     });
 </script>

@@ -16,7 +16,7 @@ app.factory('WorksService', function () {
             {id: 3, name: 'Listagem de Estabelecimentos', image: 'lista.jpg'},
             {id: 4, name: 'Conteúdo Interno', image: 'detalhes.jpg'}
         ], tags: ['design'], url: ''},
-        {id: 2, name: 'Mão na Roda', shortdescription: 'Criação do frontend', path: 'maonaroda', images: [
+        {id: 3, name: 'Mão na Roda', shortdescription: 'Criação do frontend', path: 'maonaroda', images: [
             {id: 1, name: 'Home', image: 'home.jpg'},
             {id: 2, name: 'Orçamento', image: 'orcamento.jpg'},
         ], tags: ['html', 'css', 'javascript', 'jquery', 'bootstrap'], url: ''}
@@ -27,7 +27,14 @@ app.factory('WorksService', function () {
             return items;
         },
         getItem: function(id) {
-            return items[id];
+
+            var result = false;
+            items.forEach(function(elem) {
+                if(elem.id == id)
+                    result = elem;
+            });
+
+            return result;
         }
     };
 });

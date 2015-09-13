@@ -3,33 +3,37 @@
   background:
     image: url("../images/background-main.jpg")
     repeat: repeat
+  color: $color-soft
+
+  h1
+    @extend %h1
+
+    @media #{$small}
+      text-align: left
+
+    .line
+      @extend %line
+
+      @media #{$small}
+        margin:
+          left: 0
 
   #slide
     .content
       margin:
         top: 100px
-      color: $color-soft
 
-      @media #{$xsmall-max}
+      @media #{$small-max}
         margin:
           top: 0
         padding: 40px 0
 
-      h1
-        @extend %h1
-
-        @media #{$xsmall}
-          text-align: left
-
-      .line
-        @extend %line
-
-        @media #{$xsmall}
-          margin:
-            left: 0
-
       p
         @extend %p
+
+        @media #{$small-max}
+          font:
+            size: 1em
 
     .image
       img

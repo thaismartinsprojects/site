@@ -46,8 +46,13 @@ app.controller('MainCtrl', ['$scope', '$interval', 'SlideService', 'WorksService
     }
 
     $scope.seeWork = function(id){
-        $scope.currentWork = WorksService.getItem((id - 1));
-        $scope.viewWork = true;
-    }
+        $scope.currentWork = WorksService.getItem(id);
+        if($scope.currentWork)
+            $scope.viewWork = true;
+    };
 
+    $scope.hideWork = function() {
+        $scope.currentWork = false;
+        $scope.viewWork = false;
+    };
 }]);

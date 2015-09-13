@@ -18,9 +18,9 @@ a:hover { text-decoration: none; }
 
 section { height: 100%; overflow: hidden; }
 
-.col-xxs-show { display: none; }
+.visible-xxs { display: none; }
 
-.col-xxs-hidden { display: block; }
+.hidden-xxs { display: block; }
 
 @media (max-width: 481px) { .col-xxs-0 { width: 0%; padding: 5px 15px; float: left; }
   .col-xxs-offset-0 { margin-left: 0%; }
@@ -48,20 +48,19 @@ section { height: 100%; overflow: hidden; }
   .col-xxs-offset-11 { margin-left: 91.66667%; }
   .col-xxs-12 { width: 100%; padding: 5px 15px; float: left; }
   .col-xxs-offset-12 { margin-left: 100%; }
-  .hidden-xxs { display: none; }
-  .visible-xxs { display: block !important; } }
-.col-xs-12, .col-xs-11, .col-xs-10, .col-xs-9, .col-xs-8, .col-xs-7, .col-xs-6, .col-xs-5, .col-xs-4, .col-xs-3, .col-xs-2, .col-xs-1 { padding-left: 5px; padding-right: 5px; }
-
+  .col-xs-12, .col-xs-11, .col-xs-10, .col-xs-9, .col-xs-8, .col-xs-7, .col-xs-6, .col-xs-5, .col-xs-4, .col-xs-3, .col-xs-2, .col-xs-1 { padding-left: 5px; padding-right: 5px; }
+  .visible-xxs { display: block !important; }
+  .hidden-xxs { display: none !important; } }
 @keyframes up-down { 0% { transition: transform 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95); transform: translateX(0px) translateY(-10px); }
   50% { transition: transform 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95); transform: translateX(0px) translateY(25px); }
   100% { transition: transform 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95); transform: translateX(0px) translateY(-10px); } }
-#main #slide .content h1, #about .list h1, #full-work h1, #works h1, #contact .form h1, #contact .landing h1 { font-size: 2.4em; font-weight: 300; text-align: center; margin-top: 25px; margin-bottom: 20px; }
-@media (max-width: 481px) { #main #slide .content h1, #about .list h1, #full-work h1, #works h1, #contact .form h1, #contact .landing h1 { font-size: 1.6em; text-align: center; } }
+#main h1, #about .list h1, #full-work h1, #works h1, #contact .form h1, #contact .landing h1 { font-size: 2.4em; font-weight: 300; text-align: center; margin-top: 25px; margin-bottom: 20px; }
+@media (max-width: 481px) { #main h1, #about .list h1, #full-work h1, #works h1, #contact .form h1, #contact .landing h1 { font-size: 1.6em; text-align: center; } }
 
 .form .form-group input, .form .form-group textarea, .form .form-group select, .btn-primary, .btn-primary-fill, .btn-secondary, #main #slide .content p, #about .list p { font-size: 1.2em; line-height: 1.2em; display: block; clear: both; }
 @media (max-width: 481px) { .form .form-group input, .form .form-group textarea, .form .form-group select, .btn-primary, .btn-primary-fill, .btn-secondary, #main #slide .content p, #about .list p { text-align: center; } }
 
-#main #slide .content .line, #about .list h1 .line, #works h1 .line, #contact .form h1 .line, #contact .landing h1 .line { display: block; height: 1px; width: 150px; margin: 10px auto 40px auto; background-color: #ffde00; }
+#main h1 .line, #about .list h1 .line, #works h1 .line, #contact .form h1 .line, #contact .landing h1 .line { display: block; height: 1px; width: 150px; margin: 10px auto 40px auto; background-color: #ffde00; }
 
 .form .form-group { position: relative; margin: 40px 0; }
 .form .form-group input, .form .form-group textarea, .form .form-group select { background-color: transparent; border-bottom-color: #ffde00 !important; border-bottom-style: solid; border-bottom-width: 1px !important; color: #FFFFFF; resize: none; }
@@ -141,11 +140,12 @@ footer .social li a span { font-size: 0.7em; }
 @media (max-width: 481px) { .skills ul li { font-size: 0.6em; } }
 .skills ul li i { margin-right: 5px; }
 
-#main { background-image: url("../images/background-main.jpg"); background-repeat: repeat; }
-#main #slide .content { margin-top: 100px; color: #FFFFFF; }
-@media (max-width: 481px) { #main #slide .content { margin-top: 0; padding: 40px 0; } }
-@media (min-width: 482px) { #main #slide .content h1 { text-align: left; } }
-@media (min-width: 482px) { #main #slide .content .line { margin-left: 0; } }
+#main { background-image: url("../images/background-main.jpg"); background-repeat: repeat; color: #FFFFFF; }
+@media (min-width: 768px) { #main h1 { text-align: left; } }
+@media (min-width: 768px) { #main h1 .line { margin-left: 0; } }
+#main #slide .content { margin-top: 100px; }
+@media (max-width: 767px) { #main #slide .content { margin-top: 0; padding: 40px 0; } }
+@media (max-width: 767px) { #main #slide .content p { font-size: 1em; } }
 #main #slide .image img { width: 90%; max-width: 800px; margin: 0 auto; }
 @media (max-width: 481px) { #main #slide .image img { width: 70%; display: block; } }
 
@@ -153,15 +153,15 @@ footer .social li a span { font-size: 0.7em; }
 @media (max-width: 481px) { #about .list { padding: 0; } }
 #about .list p { font-size: 1.3em; margin: 20px 0; line-height: 1.6em; text-align: center; }
 #about .list span { font-weight: 600; }
-#about .list .prev, #about .list .next { margin: 0 auto; position: absolute; cursor: pointer; top: 40%; font-size: 3em; }
+#about .list .prev, #about .list .next { -webkit-border-radius: 0.5em; -moz-border-radius: 0.5em; border-radius: 0.5em; margin: 0 auto; position: absolute; cursor: pointer; top: 40%; font-size: 1em; padding: 10px; border: 1px solid #4e6274; }
 #about .list .prev { left: 25px; }
 #about .list .next { right: 25px; }
 
-#full-work { background-color: #ffde00; width: 100%; height: 100%; z-index: 2; position: fixed; top: 0; left: 0; padding-top: 90px; }
-#full-work h1 { text-align: left; }
+#full-work { background-color: #F9F9F9; width: 100%; height: 100%; z-index: 2; position: absolute; top: 0; left: 0; padding-top: 90px; }
+#full-work h1 { text-align: left; margin-bottom: 10px; }
 #full-work ul.tags { width: 100%; margin-bottom: 30px; }
-#full-work ul.tags li { font-size: 0.8em; }
-#full-work ul.photos li { height: 150px; overflow: hidden; margin: 5px 0; }
+#full-work ul.tags li { -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; font-size: 0.6em; display: inline-block; margin: 2px; padding: 4px 8px; color: #29323d; background-color: #ffde00; }
+#full-work ul.photos li { height: 150px; overflow: hidden; margin: 2px; padding: 0; border: 1px solid #ffde00; }
 #full-work ul.photos li img { width: 100%; }
 #full-work .button { position: absolute; bottom: 20px; left: 100px; }
 #full-work .button .btn { max-width: 60px; font-size: 0.8em; }
