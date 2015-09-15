@@ -1,0 +1,11 @@
+{
+    "authors": {
+        "name": "Thais Martins",
+        "email": "contato@thaismartins.rocks",
+        "homepage": "http://www.thaismartins.rocks",
+        "role": "Developer"
+    },
+    "require": {
+        "phpmailer/phpmailer": "^5.2"
+    }
+}

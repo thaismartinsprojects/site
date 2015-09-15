@@ -1,8 +1,10 @@
 'use strict';
 
 var app = angular.module('thaisMartins');
-app.controller('MainCtrl', ['$scope', '$interval', 'SlideService', 'WorksService',
-                    function ($scope, $interval, SlideService, WorksService) {
+app.controller('MainCtrl', ['$scope', '$interval', '$http', 'SlideService', 'WorksService',
+                    function ($scope, $interval, $http, SlideService, WorksService) {
+
+    $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 
     var slides = SlideService.getItems();
     var id = 0;
@@ -17,12 +19,16 @@ app.controller('MainCtrl', ['$scope', '$interval', 'SlideService', 'WorksService
     showCurrentSlide();
 
     $scope.works = WorksService.getItems();
+    $scope.currentWork = {};
+    $scope.contact = {};
     $scope.showWork = false;
     $scope.showForm = false;
-    $scope.seeWork = false;
+    $scope.viewWork = false;
     $scope.showAllSkills = false;
+    $scope.contactSend = false;
+    $scope.sendingContact = false;
     $scope.skillCurrent = 1;
-    $scope.currentWork = WorksService.getItem(1);
+
     $scope.nextSkill = function() {
 
         var next = ($scope.skillCurrent + 1);
@@ -54,5 +60,20 @@ app.controller('MainCtrl', ['$scope', '$interval', 'SlideService', 'WorksService
     $scope.hideWork = function() {
         $scope.currentWork = false;
         $scope.viewWork = false;
+    };
+
+    $scope.sendEmail = function() {
+
+        $scope.sendingContact = true;
+
+        $http.post('app/server/mail.php', $scope.contact).success(function(response) {
+
+            $scope.contactSend = true;
+            $scope.sendingContact = false;
+
+            $scope.success = (response.success) ? 'send' : 'error' ;
+            $scope.message = response.message;
+        });
+
     };
 }]);

@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('thaisMartins', ['ngRoute']);
+var app = angular.module('thaisMartins', ['ngRoute', 'ui.mask']);
 app.config(['$routeProvider', function($routeProvider) {
 
     $routeProvider
@@ -9,8 +9,6 @@ app.config(['$routeProvider', function($routeProvider) {
             controller: 'MainCtrl'
         })
         .otherwise({
-            //templateUrl: 'app/views/error.html',
-            //controller: 'ErrorCtrl'
             redirectTo: "/"
         });
 }]);

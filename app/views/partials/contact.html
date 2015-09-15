@@ -7,26 +7,36 @@
         <button class="btn btn-primary-fill" ng-click="showForm = true">Entre em contato</button>
     </div>
     <div class="form" ng-show="showForm">
+
+        <div class="full-loading" ng-show="sendingContact">
+            <img ng-src="public/images/loading.gif" alt="Enviando..." title="Enviando...">
+            <p>Aguarde.<br>Enviando...</p>
+        </div>
+
         <h1>Entre em contato <span class="line"></span></h1>
 
+        <div class="warning {{success}}" ng-show="contactSend">
+            <p> {{message}}</p>
+        </div>
+
         <div class="form-group" ng-class="{'active': contact.name.length > 0}">
-            <label for="name">Nome</label>
+            <label for="name">Nome*</label>
             <input class="form-control" id="name" ng-model="contact.name" />
         </div>
         <div class="form-group" ng-class="{'active': contact.phone.length > 0}">
-            <label for="phone">Telefone</label>
-            <input class="form-control" id="phone" ng-model="contact.phone" />
+            <label for="phone">Telefone*</label>
+            <input class="form-control" id="phone" ng-model="contact.phone" ui-mask="(?9?9) ?9?9?9?9-?9?9?9?9?9" />
         </div>
-        <div class="form-group" ng-class="{'active': contact.email.length > 0}">
-            <label for="email">Email</label>
-            <input class="form-control" id="email" ng-model="contact.email" />
+        <div class="form-group" ng-class="{'active': contact.mail.length > 0}">
+            <label for="email">Email*</label>
+            <input class="form-control" id="email" ng-model="contact.mail" />
         </div>
         <div class="form-group" ng-class="{'active': contact.message.length > 0}">
-            <label for="message">Mensagem</label>
+            <label for="message">Mensagem*</label>
             <textarea class="form-control" id="message" ng-model="contact.message"></textarea>
         </div>
         <div class="form-group">
-            <button class="btn btn-primary">Enviar</button>
+            <button class="btn btn-primary" ng-click="sendEmail()">Enviar</button>
         </div>
     </div>
 </div>

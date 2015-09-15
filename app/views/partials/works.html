@@ -18,8 +18,8 @@
                         <li>
                             <a class="btn btn-secondary" ng-click="seeWork(work.id)"><i class="fa fa-search-plus"></i></a>
                         </li>
-                        <li>
-                            <a class="btn btn-secondary" href="{{work.url}}" ng-if="work.url" target="_blank"><i class="fa fa-external-link"></i></a>
+                        <li ng-if="work.url">
+                            <a class="btn btn-secondary" href="{{work.url}}" target="_blank"><i class="fa fa-external-link"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -28,7 +28,7 @@
     </div>
 </div>
 
-<div id="full-work" class="col-xs-12" ng-show="viewWork">
+<div id="full-work" class="col-xs-12" ng-if="viewWork && currentWork">
     <div class="col-xs-6 col-xxs-12 pull-right">
         <h1>{{currentWork.name}}</h1>
         <ul class="tags">

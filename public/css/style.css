@@ -161,7 +161,7 @@ footer .social li a span { font-size: 0.7em; }
 #full-work h1 { text-align: left; margin-bottom: 10px; }
 #full-work ul.tags { width: 100%; margin-bottom: 30px; }
 #full-work ul.tags li { -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; font-size: 0.6em; display: inline-block; margin: 2px; padding: 4px 8px; color: #29323d; background-color: #ffde00; }
-#full-work ul.photos li { height: 150px; overflow: hidden; margin: 2px; padding: 0; border: 1px solid #ffde00; }
+#full-work ul.photos li { height: 150px; overflow: hidden; margin: 10px 0; }
 #full-work ul.photos li img { width: 100%; }
 #full-work .button { position: absolute; bottom: 20px; left: 100px; }
 #full-work .button .btn { max-width: 60px; font-size: 0.8em; }
@@ -177,11 +177,18 @@ footer .social li a span { font-size: 0.7em; }
 #works .list .box .details ul.tags li { display: inline-block; font-size: 0.8em; margin: 0 2px; }
 #works .list .box .details ul.tags li a { color: #4e6274; }
 #works .list .box .details ul.buttons { text-align: center; }
-#works .list .box .details ul.buttons li { display: inline-block; }
+#works .list .box .details ul.buttons li { display: inline-block; width: 40%; margin: 0 auto; }
+#works .list .box .details ul.buttons li .btn { min-width: 100%; }
+
+.full-loading { background-color: rgba(41, 50, 61, 0.8); width: 100%; height: 100%; z-index: 2; position: absolute; top: 0; left: 0; text-align: center; color: #ffde00; font-weight: 600; line-height: 1.3em; padding-top: 90px; }
+.full-loading img { width: 40px; margin: 150px auto 20px auto; }
 
 #contact { background-color: #29323d; }
 #contact .form h1, #contact .landing h1 { color: #FFFFFF; }
 #contact .form h1 span, #contact .landing h1 span { font-weight: 600; }
+#contact .form .warning { text-align: center; font-weight: 700; }
+#contact .form .warning.send { color: greenyellow; }
+#contact .form .warning.error { color: crimson; }
 #contact .landing h1 { margin-top: 120px; }
 @media (max-width: 481px) { #contact .landing h1 { margin-top: 30px; } }
 #contact .landing .arrow { width: 60px; margin: 40px auto; -webkit-animation: up-down 1.2s infinite; animation: up-down 1.2s infinite; }
