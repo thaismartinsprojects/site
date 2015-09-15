@@ -17,6 +17,7 @@ if (hasAllRequiredFields($params)) {
     $mail->Username = "thaismartinsweb@gmail.com";
     $mail->Password = base64_decode('dGhhdGhhMTQ=');
     $mail->Port = '465';
+    $mail->SMTPDebug = 2;
 
     $mail->From = $params['mail'];
     $mail->FromName = $params['name'];
@@ -30,7 +31,8 @@ if (hasAllRequiredFields($params)) {
         $response['message'] = 'Mensagem enviada com sucesso!';
     } else {
         $response['success'] = false;
-        $response['message'] = 'Erro ao enviar: ' . $mail->ErrorInfo;
+        $response['message'] = 'Erro ao enviar mensagem. Por favor, tente novamente mais tarde.';
+        $response['errorMail'] = $mail->ErrorInfo;
     }
 
 } else {
