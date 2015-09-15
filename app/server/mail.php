@@ -13,10 +13,11 @@ if (hasAllRequiredFields($params)) {
 
     $mail->IsSMTP();  // set mailer to use SMTP
     $mail->Host = "ssl://smtp.gmail.com";  // specify main and backup server
+    $mail->Mailer = 'smtp';
     $mail->SMTPAuth = true;     // turn on SMTP authentication
     $mail->Username = "thaismartinsweb@gmail.com";
     $mail->Password = base64_decode('dGhhdGhhMTQ=');
-    $mail->Port = '465';
+    $mail->Port = 587;
     $mail->SMTPDebug = 2;
 
     $mail->From = $params['mail'];
