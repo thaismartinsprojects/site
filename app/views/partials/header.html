@@ -14,9 +14,9 @@
 </header>
 
 <div id="full-menu" class="col-xs-6" ng-class="{'active': activeMenu}">
-    <ul>
-        <li ng-repeat="item in menu">
-            <a href="#/#{{item.slug}}" ng-click="toogleMenu()">
+    <ul id="menu-full">
+        <li ng-repeat="item in menu" data-menuanchor="{{item.slug}}">
+            <a href="#{{item.slug}}" ng-click="toogleMenu()">
                 {{item.name}}
             </a>
             <span></span>

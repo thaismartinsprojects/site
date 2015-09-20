@@ -1,7 +1,7 @@
 'use strict';
 
 var app = angular.module('thaisMartins', ['ngRoute', 'ui.mask']);
-app.config(['$routeProvider', function($routeProvider) {
+app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
     $routeProvider
         .when('/', {
@@ -11,6 +11,8 @@ app.config(['$routeProvider', function($routeProvider) {
         .otherwise({
             redirectTo: "/"
         });
+
+    $locationProvider.html5Mode(true);
 }]);
 
 app.run(['$rootScope', 'MenuService',

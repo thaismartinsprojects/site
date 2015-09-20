@@ -1,17 +1,25 @@
-<section ng-include="'app/views/partials/home.html'"></section>
-<section ng-include="'app/views/partials/about.html'"></section>
-<section ng-include="'app/views/partials/works.html'"></section>
-<section ng-include="'app/views/partials/contact.html'"></section>
+<section ng-include="'app/views/partials/home.html'" class="section"></section>
+<section ng-include="'app/views/partials/about.html'" class="section"></section>
+<section ng-include="'app/views/partials/works.html'" class="section"></section>
+<section ng-include="'app/views/partials/contact.html'" class="section"></section>
 
 <script>
     window.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
     $(function() {
         if(!window.isMobile) {
-            $('head').append('<link rel="stylesheet" href="public/css/onepage-scroll.css" type="text/css" />');
-            $(".pages").onepage_scroll({
-                sectionContainer: "section"
+            $('head').append('<link rel="stylesheet" href="bower_components/fullpage.js/jquery.fullPage.css" type="text/css" />');
+
+            if($('html').hasClass('fp-enabled')){
+                $.fn.fullpage.destroy('all');
+            }
+
+            $("#pages").fullpage({
+                anchors: ['home', 'sobre-mim', 'meus-trabalhos', 'contato'],
+                menu: '#menu-full',
+                navigation: true
             });
+
         }
 
         lightbox.option({
