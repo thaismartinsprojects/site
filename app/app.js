@@ -16,7 +16,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 }]);
 
 app.run(['$rootScope', 'MenuService',
-            function($rootScope, MenuService) {
+    function($rootScope, MenuService) {
 
     $rootScope.activeMenu = false;
     $rootScope.menu = MenuService.getItems();

@@ -11,6 +11,16 @@
     @media #{$small}
       text-align: left
 
+    b,
+    strong
+      font-weight: 800
+
+    .dot
+      color: $color-special
+      font-weight: 900
+      margin:
+        left: 3px
+
     .line
       @extend %line
 
@@ -35,6 +45,18 @@
           font:
             size: 1em
 
+      a
+        padding: 10px
+        color: $color-soft
+        background:
+          color: $color-special
+        margin-top: 25px
+        display: table
+
+        @media #{$small-max}
+          display: block
+          text-align: center
+
     .image
       img
         width: 90%
@@ -42,5 +64,5 @@
         margin: 0 auto
 
         @media #{$xsmall-max}
-          width: 70%
+          width: 90%
           display: block
