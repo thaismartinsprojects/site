@@ -32,3 +32,25 @@
   -moz-box-shadow: none
   -webkit-box-shadow: none
   box-shadow: none
+
+.dot
+  background:
+    color: $color-special
+  font-weight: 900
+  width: 7px
+  height: 7px
+  display: inline-block
+  margin:
+    left: 5px
+
+.line
+  display: block
+  height: 1px
+  width: 80px
+  margin: 10px auto 40px auto
+  background:
+    color: $color-special
+
+  @media #{$small}
+    margin:
+      left: 0

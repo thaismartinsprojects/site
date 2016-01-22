@@ -54,13 +54,13 @@ section { height: 100%; overflow: hidden; }
 @keyframes up-down { 0% { transition: transform 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95); transform: translateX(0px) translateY(-10px); }
   50% { transition: transform 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95); transform: translateX(0px) translateY(25px); }
   100% { transition: transform 500ms cubic-bezier(0.445, 0.05, 0.55, 0.95); transform: translateX(0px) translateY(-10px); } }
-#main h1, #about .list h1, #full-work h1, #works h1, #contact .form h1, #contact .landing h1 { font-size: 2.4em; font-weight: 300; text-align: center; margin-top: 25px; margin-bottom: 20px; }
-@media (max-width: 481px) { #main h1, #about .list h1, #full-work h1, #works h1, #contact .form h1, #contact .landing h1 { font-size: 1.6em; text-align: center; } }
+#main h1, #about h1, #full-work h1, #works h1, #contact .form h1, #contact .landing h1 { font-size: 2.4em; font-weight: 300; margin-top: 25px; margin-bottom: 20px; }
+@media (max-width: 481px) { #main h1, #about h1, #full-work h1, #works h1, #contact .form h1, #contact .landing h1 { font-size: 1.6em; text-align: center; } }
+#main h1.page-title, #about h1.page-title, #full-work h1.page-title, #works h1.page-title, #contact .form h1.page-title, #contact .landing h1.page-title { padding-top: 40px; }
+#main h1 b, #about h1 b, #full-work h1 b, #works h1 b, #contact .form h1 b, #contact .landing h1 b, #main h1 strong, #about h1 strong, #full-work h1 strong, #works h1 strong, #contact .form h1 strong, #contact .landing h1 strong { font-weight: 900; }
 
-.form .form-group input, .form .form-group textarea, .form .form-group select, .btn-primary, .btn-primary-fill, .btn-secondary, #main #slide .content p, #about .list p { font-size: 1.2em; line-height: 1.2em; display: block; clear: both; }
-@media (max-width: 481px) { .form .form-group input, .form .form-group textarea, .form .form-group select, .btn-primary, .btn-primary-fill, .btn-secondary, #main #slide .content p, #about .list p { text-align: center; } }
-
-#main h1 .line, #about .list h1 .line, #works h1 .line, #contact .form h1 .line, #contact .landing h1 .line { display: block; height: 1px; width: 150px; margin: 10px auto 40px auto; background-color: #EEEEEE; }
+.form .form-group input, .form .form-group textarea, .form .form-group select, .btn-primary, .btn-primary-fill, .btn-secondary, #main #slide .content p, #about p { font-size: 1.2em; line-height: 1.2em; display: block; clear: both; }
+@media (max-width: 481px) { .form .form-group input, .form .form-group textarea, .form .form-group select, .btn-primary, .btn-primary-fill, .btn-secondary, #main #slide .content p, #about p { text-align: center; } }
 
 .form .form-group { position: relative; margin: 40px 0; }
 .form .form-group input, .form .form-group textarea, .form .form-group select { background-color: transparent; border-bottom-color: #EEEEEE !important; border-bottom-style: solid; border-bottom-width: 1px !important; color: #FFFFFF; resize: none; }
@@ -93,6 +93,11 @@ section { height: 100%; overflow: hidden; }
 .form .form-group input, .form .form-group textarea, .form .form-group select { -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; }
 
 .form .form-group input, .form .form-group textarea, .form .form-group select { outline: 0; border-color: inherit; border-width: 0; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+
+.dot { background-color: #EF2D56; font-weight: 900; width: 7px; height: 7px; display: inline-block; margin-left: 5px; }
+
+.line { display: block; height: 1px; width: 80px; margin: 10px auto 40px auto; background-color: #EF2D56; }
+@media (min-width: 768px) { .line { margin-left: 0; } }
 
 header { height: 70px; position: fixed !important; padding: 0 !important; margin: 0 !important; z-index: 2; color: #FFFFFF; background-color: #EEEEEE; }
 @media (max-width: 481px) { header { height: 50px; } }
@@ -141,26 +146,19 @@ footer .social li a span { font-size: 0.7em; }
 @media (max-width: 481px) { .skills ul li { font-size: 0.6em; } }
 .skills ul li i { margin-right: 5px; }
 
-#main { background-image: url("../images/background-main.jpg"); background-repeat: repeat; color: #FFFFFF; }
+#main { background-image: url("../images/background-main.jpg"); background-repeat: repeat; background-attachment: fixed; background-size: cover; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; color: #FFFFFF; }
 @media (min-width: 768px) { #main h1 { text-align: left; } }
 #main h1 b, #main h1 strong { font-weight: 800; }
-#main h1 .dot { color: #EF2D56; font-weight: 900; margin-left: 3px; }
-@media (min-width: 768px) { #main h1 .line { margin-left: 0; } }
 #main #slide .content { margin-top: 100px; }
 @media (max-width: 767px) { #main #slide .content { margin-top: 0; padding: 40px 0; } }
 @media (max-width: 767px) { #main #slide .content p { font-size: 1em; } }
-#main #slide .content a { padding: 10px; color: #FFFFFF; background-color: #EF2D56; margin-top: 25px; display: table; }
+#main #slide .content a { padding: 10px 20px; margin: 25px 0; display: table; font-size: 1em; }
 @media (max-width: 767px) { #main #slide .content a { display: block; text-align: center; } }
 #main #slide .image img { width: 90%; max-width: 800px; margin: 0 auto; }
 @media (max-width: 481px) { #main #slide .image img { width: 90%; display: block; } }
 
-#about .list { padding: 85px; }
-@media (max-width: 481px) { #about .list { padding: 0; } }
-#about .list p { font-size: 1.3em; margin: 20px 0; line-height: 1.6em; text-align: center; }
-#about .list span { font-weight: 600; }
-#about .list .prev, #about .list .next { -webkit-border-radius: 0.5em; -moz-border-radius: 0.5em; border-radius: 0.5em; margin: 0 auto; position: absolute; cursor: pointer; top: 40%; font-size: 1em; padding: 10px; border: 1px solid #4e6274; }
-#about .list .prev { left: 25px; }
-#about .list .next { right: 25px; }
+#about p { font-size: 1.3em; margin: 20px 0; line-height: 1.6em; }
+#about b, #about strong { font-weight: 600; }
 
 #full-work { background-color: #F9F9F9; width: 100%; height: 100%; z-index: 2; position: absolute; top: 0; left: 0; padding-top: 90px; }
 #full-work h1 { text-align: left; margin-bottom: 10px; }
