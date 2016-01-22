@@ -3,6 +3,11 @@
   background:
     image: url("../images/background-main.jpg")
     repeat: repeat
+    attachment: fixed
+    size: cover
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
   color: $color-soft
 
   h1
@@ -14,19 +19,6 @@
     b,
     strong
       font-weight: 800
-
-    .dot
-      color: $color-special
-      font-weight: 900
-      margin:
-        left: 3px
-
-    .line
-      @extend %line
-
-      @media #{$small}
-        margin:
-          left: 0
 
   #slide
     .content
@@ -46,12 +38,11 @@
             size: 1em
 
       a
-        padding: 10px
-        color: $color-soft
-        background:
-          color: $color-special
-        margin-top: 25px
+        padding: 10px 20px
+        margin: 25px 0
         display: table
+        font:
+          size: 1em
 
         @media #{$small-max}
           display: block

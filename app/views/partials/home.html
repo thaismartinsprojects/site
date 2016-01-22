@@ -4,9 +4,9 @@
             <img ng-src="public/images/slides/{{slide.image}}" alt="{{slide.name}}" alt="{{slide.name}}" />
         </div>
         <div class="content visible-md visible-xs visible-sm visible-lg col-xs-12 col-sm-5 pull-left">
-            <h1 ng-bind-html="slide.name | splitWords"><span class="line"></span></h1>
+            <h1 ng-bind-html="slide.name | splitWords:'dot'"></h1>
             <p>{{slide.description}}</p>
-            <a href="#contact">Peça um orçamento</a>
+            <a href="#contact" class="btn-primary-fill">Peça um orçamento</a>
         </div>
     </div>
 </div>
