@@ -18,8 +18,16 @@
           width: 1px !important
       color: $color-soft
       resize: none
+      opacity: .2
 
     label
+      position: absolute
+      color: $color-soft
+      font:
+        weight: 400
+        size: 1.3em
+      left: 10px
+
       @media #{$xsmall-max}
         font:
           size: 1em !important
@@ -28,20 +36,12 @@
       label
         top: -20px
         font:
-          size: .8em
-        color: $color-primary
+          size: .9em
+        color: $color-special
 
       input,
       textarea,
       select
+        opacity: 1
         border:
           bottom: 1px solid $color-secondary-soft
-
-    label
-      position: absolute
-      color: $color-soft
-      font:
-        weight: 300
-        size: 1.3em
-      left: 10px
-

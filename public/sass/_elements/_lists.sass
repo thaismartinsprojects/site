@@ -1,0 +1,23 @@
+.skills-list
+  padding: 15px 0
+  border:
+    bottom: 1px solid $color-primary-dark
+
+  li
+    display: inline
+    padding: 14px 25px
+    font:
+      size: .8em
+    text:
+      transform: uppercase
+    cursor: pointer
+
+    @media #{$medium-max}
+      padding: 14px 10px
+
+    &.active
+      border:
+        bottom: 2px solid $color-special
+      color: $color-special
+      font:
+        weight: 600

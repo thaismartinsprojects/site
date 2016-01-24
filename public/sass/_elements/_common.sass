@@ -45,12 +45,18 @@
 
 .line
   display: block
-  height: 1px
+  height: 2px
   width: 80px
-  margin: 10px auto 40px auto
+  margin:
+    top: 10px
+    bottom: 40px
   background:
     color: $color-special
 
   @media #{$small}
     margin:
       left: 0
+
+  @media #{$xsmall-max}
+    margin:
+      bottom: 20px
