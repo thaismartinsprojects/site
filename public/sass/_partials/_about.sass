@@ -1,15 +1,19 @@
 #about
   @extend %page
+  margin:
+    top: 50px
+
+  @media #{$small-max}
+    margin:
+      top: 0
+    padding:
+      top: 0
 
   h1
     @extend %h1
 
   p
     @extend %p
-    font:
-      size: 1.3em
-    margin: 20px 0
-    line-height: 1.6em
 
   b,
   strong
