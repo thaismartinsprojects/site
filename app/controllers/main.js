@@ -6,17 +6,30 @@ app.controller('MainCtrl', ['$scope', '$interval', '$http', 'SlideService', 'Wor
 
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 
-    var slides = SlideService.getItems();
-    var id = 0;
+    // SLIDE
+    $scope.allSlides = SlideService.getItems();
+    var slidePosition = 0;
 
-    var showCurrentSlide = function() {
-        if(id > (slides.length -1)) id = 0;
-        $scope.slide = slides[id];
-        id++;
+    var showSlide = function(nextSlide) {
+        $scope.allSlides.forEach(function(slide){
+            if(slide.id == nextSlide.id)
+                $scope.currentSlide = slide.id;
+        });
     };
 
-    $interval(showCurrentSlide, 5000);
-    showCurrentSlide();
+    var showNextSlide = function() {
+        if(slidePosition > ($scope.allSlides.length -1)) slidePosition = 0;
+        showSlide($scope.allSlides[slidePosition]);
+        slidePosition++;
+    };
+
+    //$interval(showNextSlide, 8000);
+    showNextSlide();
+
+    $scope.showSlide = function(nextSlide) {
+        showSlide(nextSlide);
+    };
+
 
     $scope.works = WorksService.getItems();
     $scope.currentWork = {};
@@ -27,25 +40,7 @@ app.controller('MainCtrl', ['$scope', '$interval', '$http', 'SlideService', 'Wor
     $scope.showAllSkills = false;
     $scope.contactSend = false;
     $scope.sendingContact = false;
-    $scope.skillCurrent = 1;
-
-    $scope.nextSkill = function() {
-
-        var next = ($scope.skillCurrent + 1);
-        if(next > 5)
-            next = 1;
-
-        $scope.skillCurrent = next;
-    };
-
-    $scope.prevSkill = function() {
-
-        var next = ($scope.skillCurrent - 1);
-        if(next == 0)
-            next = 5;
-
-        $scope.skillCurrent = next;
-    };
+    $scope.skillCurrent = 'design';
 
     if(window.isMobile){
         $scope.showAllSkills = true;

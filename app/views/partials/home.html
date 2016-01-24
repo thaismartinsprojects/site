@@ -1,12 +1,23 @@
 <div id="main" class="col-xs-12">
-    <div id="slide">
-        <div class="image col-xs-12 col-sm-7 pull-right">
-            <img ng-src="public/images/slides/{{slide.image}}" alt="{{slide.name}}" alt="{{slide.name}}" />
+
+    <div id="slides" class="col-xs-12">
+        <div class="slide" ng-repeat="slide in allSlides" ng-show="currentSlide == slide.id">
+            <div class="image col-xs-12 col-sm-7 pull-right">
+                <img ng-src="public/images/slides/{{slide.image}}" alt="{{slide.name}}" alt="{{slide.name}}" />
+            </div>
+
+            <div class="content visible-md visible-xs visible-sm visible-lg col-xs-12 col-sm-5 pull-left">
+                <h1 ng-bind-html="slide.name | splitWords:'dot'"></h1>
+                <span class="line"></span>
+                <p>{{slide.description}}</p>
+                <a href="#contato" class="btn-primary-fill">Peça um orçamento</a>
+            </div>
         </div>
-        <div class="content visible-md visible-xs visible-sm visible-lg col-xs-12 col-sm-5 pull-left">
-            <h1 ng-bind-html="slide.name | splitWords:'dot'"></h1>
-            <p>{{slide.description}}</p>
-            <a href="#contact" class="btn-primary-fill">Peça um orçamento</a>
-        </div>
+
+        <ul class="buttons" >
+            <li ng-repeat="otherSlide in allSlides" ng-class="{'active': currentSlide == otherSlide.id}"
+                ng-click="showSlide(otherSlide)"></li>
+        </ul>
     </div>
+
 </div>
