@@ -129,10 +129,11 @@ header.active nav ul li:first-child { -ms-transform: rotate(20deg); -webkit-tran
 header.active nav ul li:last-child { -ms-transform: rotate(-20deg); -webkit-transform: rotate(-20deg); -moz-transform: rotate(-20deg); -o-transform: rotate(-20deg); transform: rotate(-20deg); width: 15px; margin-left: 15px; margin-top: -5px; }
 
 footer { bottom: 0; padding: 10px 0; z-index: 2; font-size: 0.8em; font-weight: 400; background-color: #EEEEEE; }
-@media (max-width: 481px) { footer { text-align: center; } }
-@media (max-width: 481px) { footer .social { float: none !important; } }
+@media (max-width: 481px) { footer { text-align: center; padding: 0; } }
 footer .social li { margin: 0; display: inline-block; }
-footer .social li a { -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; padding: 5px 8px; background-color: #29323d; color: #FFFFFF; }
+footer .social li a { width: 100%; border-left: 1px solid #a2a2a2; padding: 5px 12px; color: #29323d; }
+@media (max-width: 481px) { footer .social li a { border: none; text-align: center; font-size: 1.2em; } }
+footer .social li a:hover { background-color: #29323d; color: #FFFFFF; }
 footer .social li a span { font-size: 0.7em; }
 
 #full-menu { display: none; background-color: #EEEEEE; width: 100%; height: 100%; z-index: 2; position: fixed; top: 0; left: 0; text-align: center; }
