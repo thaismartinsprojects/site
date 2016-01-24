@@ -22,8 +22,8 @@ if (hasAllRequiredFields($params)) {
 
     $mail->From = $params['mail'];
     $mail->FromName = $params['name'];
-    $mail->AddAddress('contato@thaismartins.rocks'); //recipient
-    $mail->Subject = '[thaismartins.rocks] Contato do site';
+    $mail->AddAddress('contato@thaismartins.co'); //recipient
+    $mail->Subject = '[thaismartins.co] Contato do site';
     $mail->IsHTML(true);
 //    $mail->Body = "Nome: " . $_REQUEST['name'] . "\r\n\r\nTelefone: " . stripslashes($_REQUEST['phone']) .  "\r\n\r\nEmail: " . stripslashes($_REQUEST['mail']) . "\r\n\r\nMessage: " . stripslashes($_REQUEST['message']);
     $mail->Body = getBodyMail('contact', $params);
