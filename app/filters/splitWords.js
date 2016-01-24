@@ -6,13 +6,18 @@ app.filter('splitWords', ['$sce',  function($sce) {
 
         var words = input.split(' ');
 
-        if(words.length == 2)
-            input = '<strong>' + words[0] + '</strong><br>' + words[1];
+        if(words.length > 1) {
+            words.forEach(function(word, index) {
+                if(index == 0)
+                    input = '<strong>' + word + '</strong><br>';
+                else
+                    input += ' ' + word;
+            });
+        }
 
         if(style == 'dot')
             input += '<span class="dot"></span>';
 
-        console.log(input);
         return $sce.trustAsHtml(input);
     };
 }]);
