@@ -7,5 +7,8 @@
     }],
     "require": {
         "phpmailer/phpmailer": "^5.2"
+    },
+    "engines": {
+        "node": "4.4.x"
     }
 }
