@@ -1,10 +1,10 @@
-# thaismartins.rocks
+# thaismartins.co
 
 Para instalação:
 
 ```
 bower install
-composer install
+npm install
 ```
 
 Para build:
