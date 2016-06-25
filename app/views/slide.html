@@ -10,7 +10,7 @@
                 <h1 ng-bind-html="slide.name | splitWords:'dot'"></h1>
                 <span class="line"></span>
                 <p>{{slide.description}}</p>
-                <a href="#contato" class="btn-primary-fill">Peça um orçamento</a>
+                <button ng-click="goToContact()" class="btn-primary-fill">Peça um orçamento</button>
             </div>
         </div>
 

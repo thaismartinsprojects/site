@@ -1,0 +1,29 @@
+<div id="full-work" class="col-xs-12" ng-hide="!currentWork">
+
+    <div class="button col-xxs-12">
+        <a ng-click="hideWork()">
+            fechar <i class="fa fa-times"></i>
+        </a>
+    </div>
+
+    <div class="col-xs-4 col-xxs-12">
+        <h1 ng-bind-html="currentWork.name | splitWords:'dot'" ng-if="currentWork.name"></h1>
+        <span class="line"></span>
+
+        <ul class="tags">
+            <li ng-repeat="tag in currentWork.tags">{{tag | uppercase}}</li>
+        </ul>
+        <p>{{currentWork.description}}</p>
+    </div>
+
+    <div class="col-xs-8 col-xxs-12">
+        <ul class="photos">
+            <li ng-repeat="img in currentWork.images" class="col-xs-6 col-xxs-12">
+                <a href="public/images/works/{{currentWork.path}}/{{img.image}}" data-lightbox="{{currentWork.path}}" data-title="{{img.name}}">
+                    <img ng-src="public/images/works/{{currentWork.path}}/{{img.image}}" alt="{{img.name}}" title="{{img.name}}">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>

@@ -4,15 +4,17 @@
 <!--[if IE 8]>         <html lang="pt" ng-app="thaisMartins" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="pt" ng-app="thaisMartins" class="no-js"> <!--<![endif]-->
 <head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
     <base href="/site/">
     <link rel="shortcut icon" href="public/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="public/images/favicon.ico" type="image/x-icon">
     <title>Thais Martins - Desenvolvedora Web Freelancer</title>
 
     <link href='https://fonts.googleapis.com/css?family=Raleway:100,400,300,600,800' rel='stylesheet' type='text/css'>
+
+    <link href="public/css/dependencies.min.css" rel='stylesheet' type='text/css'>
     <link href="public/css/style.min.css" rel='stylesheet' type='text/css'>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -28,15 +30,32 @@
         <p>Você está usando um navegador <strong>desatualizado</strong>. Por favor, <a href="http://browsehappy.com/">atualize-o</a> para ter uma melhor experiência.</p>
     <![endif]-->
 
-    <div ng-include="'app/views/partials/header.html'"></div>
-    <div class="container-fluid" id="pages">
-        <main ng-view></main>
+    <div ui-view="header"></div>
+    <div class="container-fluid">
+        <div ui-view="slide"></div>
+        <div ui-view="about"></div>
+        <div ui-view="skill"></div>
+        <div ui-view="works"></div>
+        <div ui-view="works-modal"></div>
+        <div ui-view="contact"></div>
     </div>
-    <div ng-include="'app/views/partials/footer.html'"></div>
+    <div ui-view="footer"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
     <script src="public/js/dependencies.min.js"></script>
     <script src="public/js/app.min.js"></script>
+
+    <script>
+        window.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+        $(function() {
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true,
+                'showImageNumberLabel': false
+            });
+        });
+    </script>
 </body>
 </html>
