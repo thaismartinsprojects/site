@@ -14,12 +14,12 @@ var UserSchema   = new Schema({
 });
 
 function generatePassword(password) {
-
-    return bcrypt.hashSync(password, salt)
+    
+    return bcrypt.hashSync(password, salt);
 }
 
 UserSchema.methods.comparePassword = function(password) {
-    
+
     if(!this.password) return false;
     return bcrypt.compareSync(password, this.password);
 };
@@ -27,8 +27,10 @@ UserSchema.methods.comparePassword = function(password) {
 UserSchema.methods.generateToken = function() {
 
     if(!this.password) return false;
-    var user = {'user': this.user, 'email': this.email, 'name': this.name};
-    return jwt.sign(user, config.jwt.secret, {expiresIn: config.jwt.expires})
+    return jwt.sign(
+        {'user': this.user, 'email': this.email, 'name': this.name},
+        config.jwt.secret,
+        {expiresIn: config.jwt.expires});
 };
 
 module.exports = mongoose.model('User', UserSchema);
