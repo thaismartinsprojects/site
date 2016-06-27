@@ -9,9 +9,10 @@ module.exports =
     if token
       jwt.verify token, config.jwt.secret, (err, decoded) ->
         if err
-          return res.json({
+          return res.status(403).json({
             success: false,
-            message: 'Failed to authenticate token.'
+            message: 'Failed to authenticate token.',
+            error : err
           })
         else
           req.decoded = decoded
