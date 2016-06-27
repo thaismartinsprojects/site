@@ -1,5 +1,5 @@
 jwt = require 'jsonwebtoken'
-config = require './config'
+config = require '../config'
 
 module.exports =
   isAuthenticated: (req, res, next) ->

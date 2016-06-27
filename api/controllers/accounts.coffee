@@ -1,6 +1,6 @@
 express = require 'express'
 router = express.Router()
-auth = require '../auth'
+auth = require '../services/auth'
 User = require '../models/User'
 
 # GET ALL USERS

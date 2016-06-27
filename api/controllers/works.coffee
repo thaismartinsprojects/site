@@ -1,6 +1,6 @@
 express = require 'express'
 router = express.Router()
-auth = require '../auth'
+auth = require '../services/auth'
 Work = require '../models/Work'
 fs = require 'fs'
 multer = require 'multer'
