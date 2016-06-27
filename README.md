@@ -10,5 +10,5 @@ npm install
 Para build:
 
 ```
-compass
+gulp build
 ```
