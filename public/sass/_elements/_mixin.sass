@@ -112,3 +112,9 @@
       @include scale3d(1, 1, 1)
       @include box-shadow(0, 0, 0, 1px, $color, true)
       @include transition(box-shadow .2s, transform .3s)
+
+@mixin animation($animate)
+  -webkit-animation: $animate
+  -moz-animation: $animate
+  -o-animation: $animate
+  animation: $animate

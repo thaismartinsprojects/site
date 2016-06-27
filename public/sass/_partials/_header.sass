@@ -3,7 +3,7 @@ header
   position: fixed !important
   padding: 0 !important
   margin: 0 !important
-  z-index: 2
+  z-index: 9999
   color: $color-soft
   background:
     color: $color-primary
@@ -13,16 +13,24 @@ header
 
   .logo
     padding: 0
+    position: relative
+
+    img
+      position: absolute
+      max-width: 35px
+      left: 40px
+      top: 18px
 
     .title
       float: left
       color: $color-secondary
       letter-spacing: -1px
-      padding: 10px 15px 10px 45px
+      padding: 10px 15px 10px 85px
       margin:
         top: 15px
       font:
         size: 1.5em
+
 
       @media #{$xsmall-max}
         padding:
@@ -80,10 +88,6 @@ header
 
 
   &.active
-    background:
-      color: transparent
-    z-index: 3
-
     nav
       p
         &.back
@@ -106,6 +110,7 @@ header
 
         li
           &:first-child
+            @include transition(all .2s)
             @include rotate(20)
             width: 15px
             margin:
@@ -113,8 +118,10 @@ header
               bottom: -5px
 
           &:last-child
+            @include transition(all .2s)
             @include rotate(-20)
             width: 15px
             margin:
               left: 15px
               top: -5px
+
