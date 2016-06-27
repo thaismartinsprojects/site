@@ -5,7 +5,7 @@ bcrypt = require 'bcrypt'
 config = require '../config'
 salt = bcrypt.genSaltSync(10)
 
-generatePassword(password) ->
+generatePassword = (password) ->
   bcrypt.hashSync(password, salt);
 
 UserSchema   = new Schema
@@ -14,7 +14,6 @@ UserSchema   = new Schema
   user: type: String, required: true
   password: type: String, required: true, set: generatePassword
   created: type: Date, default: Date.now
-
 
 UserSchema.methods.comparePassword = (password) ->
   return false unless this.password
