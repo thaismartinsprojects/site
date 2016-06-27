@@ -12,6 +12,7 @@ UserSchema   = new Schema
   name: type: String, required: true
   email: type: String, unique: true, required: true
   user: type: String, required: true
+  token: String
   password: type: String, required: true, set: generatePassword
   created: type: Date, default: Date.now
 

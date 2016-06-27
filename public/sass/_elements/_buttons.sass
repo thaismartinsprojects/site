@@ -1,71 +1,70 @@
 %button
   @extend %p
-  @include rounded(30px)
   font:
     weight: 300
   min-width: 150px
   margin: 20px auto
   display: block
 
-.btn-primary
-  @extend %button
-  background:
-    color: transparent
-  border: 1px solid $color-soft
-  color: $color-soft
-
   &:hover,
   &:active,
   &:active:hover,
   &:active:focus,
   &:focus,
-  &:visited:hover
-    background:
-      color: $color-primary
-    border: 1px solid $color-primary
-    color: $color-secondary
+  &:visited:hover,
+  &::before
+    @include rounded(30px)
 
-  &:visited
-    color: $color-soft
-
-.btn-primary-fill
-  @extend %button
-  background:
-    color: $color-special
-  border: 1px solid $color-special
-  color: $color-soft
-
-  &:hover,
-  &:active,
-  &:active:hover,
-  &:active:focus,
-  &:focus,
-  &:visited:hover
+.btn
+  &.btn-primary
+    @extend %button
     background:
       color: transparent
-    border: 1px solid $color-special
-    color: $color-special
-
-  &:visited
+    border: 1px solid $color-soft
     color: $color-soft
 
-.btn-secondary
-  @extend %button
-  background:
-    color: transparent
-  border: 1px solid $color-secondary-soft
-  color: $color-secondary
-
-  &:hover,
-  &:active,
-  &:active:hover,
-  &:active:focus,
-  &:focus,
-  &:visited:hover
-    background:
+    &:hover,
+    &:active,
+    &:active:hover,
+    &:active:focus,
+    &:focus,
+    &:visited:hover
+      background:
+        color: $color-primary
+      border: 1px solid $color-primary
       color: $color-secondary
-    border: 1px solid $color-secondary
-    color: $color-soft
 
-  &:visited
+    &:visited
+      color: $color-soft
+
+  &.btn-secondary
+    background:
+      color: transparent
+    border: 1px solid $color-secondary-soft
     color: $color-secondary
+
+    &:hover,
+    &:active,
+    &:active:hover,
+    &:active:focus,
+    &:focus,
+    &:visited:hover
+      background:
+        color: $color-secondary
+      border: 1px solid $color-secondary
+      color: $color-soft
+
+    &:visited
+      color: $color-secondary
+
+  &.btn-primary-fill
+    @include create-button-fill($color-primary, $color-secondary)
+
+  &.btn-secondary-fill
+    @include create-button-fill($color-secondary, $color-soft)
+
+  &.btn-special-fill
+    @include create-button-fill($color-special, $color-soft)
+
+  &.btn-small
+    width: 40px

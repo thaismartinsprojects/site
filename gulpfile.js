@@ -24,7 +24,7 @@ var cssFiles = [
 ];
 
 function logError(error) {
-    console.error.bind(error);
+    console.error(error);
     this.emit('end');
 }
 

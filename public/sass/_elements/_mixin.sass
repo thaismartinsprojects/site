@@ -38,3 +38,77 @@
   -webkit-filter: blur($intensity)
   -moz-filter: blur($intensity)
   filter: blur($intensity)
+
+@mixin scale3d($scaleX, $scaleY, $scaleZ)
+  -ms-transform: scale3d($scaleX, $scaleY, $scaleZ)
+  -webkit-transform: scale3d($scaleX, $scaleY, $scaleZ)
+  -moz-transform: scale3d($scaleX, $scaleY, $scaleZ)
+  -o-transform: scale3d($scaleX, $scaleY, $scaleZ)
+  transform: scale3d($scaleX, $scaleY, $scaleZ)
+
+@mixin transition($valueOne, $valueTwo: false)
+  @if $valueTwo
+    -o-transition: $valueOne, $valueTwo
+    -webkit-transition: $valueOne, $valueTwo
+    -moz-transition: $valueOne, $valueTwo
+    transition: $valueOne, $valueTwo
+  @else
+  -o-transition: $valueOne
+  -webkit-transition: $valueOne
+  -moz-transition: $valueOne
+  transition: $valueOne
+
+@mixin create-button-fill($color, $color-font)
+  @include rounded(30px)
+  width: 250px
+  height: 50px
+  border: none
+  position: relative
+  background:
+    color: transparent
+
+  span,
+  i
+    @include transition(color .3s)
+    position: absolute
+    font:
+      weight: 600
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    margin: auto
+    z-index: 2
+    color: $color-font
+    vertical-align: middle
+    display: inline-table
+    text-align: center
+    width: 100%
+
+  &::before
+    @include rounded(30px)
+    @include box-shadow(0, 0, 0, 135px, $color, true)
+    @include scale3d(0.9, 0.9, 1)
+    @include transition(box-shadow .3s, transform .3s)
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+  &:hover,
+  &:active,
+  &:active:hover,
+  &:active:focus,
+  &:focus,
+  &:visited:hover,
+  &:visited
+    span,
+    i
+      color: $color
+
+    &::before
+      @include scale3d(1, 1, 1)
+      @include box-shadow(0, 0, 0, 1px, $color, true)
+      @include transition(box-shadow .2s, transform .3s)

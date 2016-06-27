@@ -7,7 +7,9 @@
         <div class="arrow">
             <img src="public/images/arrow.png" alt="Entre em contato" title="Entre em contato">
         </div>
-        <button class="btn btn-primary-fill" ng-click="showForm = true">Entre em contato</button>
+        <button class="btn btn-special-fill" ng-click="showForm = true">
+            <span>Entre em contato</span>
+        </button>
     </div>
 
     <div class="form" ng-show="showForm">
@@ -46,7 +48,9 @@
                 <textarea class="form-control" id="message" ng-model="contact.message"></textarea>
             </div>
             <div class="form-group">
-                <button class="btn btn-primary-fill" ng-click="sendEmail()">Enviar</button>
+                <button class="btn btn-special-fill" ng-click="sendEmail()">
+                    <span>Enviar</span>
+                </button>
             </div>
         </div>
 

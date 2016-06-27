@@ -56,6 +56,7 @@ module.exports =
             'status': 500,
             'success': false
     with: (message, data) ->
+        responseJson = {}
         if message
             responseJson.message = message.text;
             responseJson.code = message.code;
