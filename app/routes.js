@@ -6,7 +6,7 @@ angular.module('thaisMartins', [
 ])
 .config(['$locationProvider', '$stateProvider', '$urlRouterProvider', function($locationProvider, $stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise("/state1");
+    $urlRouterProvider.otherwise("/");
 
     $stateProvider
         .state('root', {
