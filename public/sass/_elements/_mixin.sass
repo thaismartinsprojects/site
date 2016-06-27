@@ -46,6 +46,20 @@
   -o-transform: scale3d($scaleX, $scaleY, $scaleZ)
   transform: scale3d($scaleX, $scaleY, $scaleZ)
 
+@mixin skewX($deg)
+  -ms-transform: skewX($deg)
+  -webkit-transform: skewX($deg)
+  -moz-transform: skewX($deg)
+  -o-transform: skewX($deg)
+  transform: skewX($deg)
+
+@mixin skewY($deg)
+  -ms-transform: skewY($deg)
+  -webkit-transform: skewY($deg)
+  -moz-transform: skewY($deg)
+  -o-transform: skewY($deg)
+  transform: skewY($deg)
+
 @mixin transition($valueOne, $valueTwo: false)
   @if $valueTwo
     -o-transition: $valueOne, $valueTwo
