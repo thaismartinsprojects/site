@@ -22,7 +22,7 @@ angular.module('thaisMartins', [
             views: {
                 'slide@': {
                     templateUrl: 'app/views/slide.html',
-                    controller: 'SlideController'
+                    controller: 'SlidesController'
                 },
                 'about@': {
                     templateUrl: 'app/views/about.html',

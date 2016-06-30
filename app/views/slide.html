@@ -1,12 +1,14 @@
 <div id="main" class="col-xs-12">
 
     <div id="slides" class="col-xs-12">
-        <div class="slide" ng-repeat="slide in allSlides" ng-show="currentSlide == slide.id">
-            <div class="image col-xs-12 col-sm-7 pull-right">
+        <div class="slide" ng-repeat="slide in allSlides" ng-show="currentSlide == slide.id"
+            ng-class="{'right': $index % 2 != 0}">
+
+            <div class="image">
                 <img ng-src="public/images/slides/{{slide.image}}" alt="{{slide.name}}" alt="{{slide.name}}" />
             </div>
 
-            <div class="content visible-md visible-xs visible-sm visible-lg col-xs-12 col-sm-5 pull-left">
+            <div class="content col-xs-12">
                 <h1 ng-bind-html="slide.name | splitWords:'dot'"></h1>
                 <span class="line"></span>
                 <p>{{slide.description}}</p>
@@ -16,9 +18,12 @@
             </div>
         </div>
 
+        <div class="prev" ng-click="showPrevSlide()"></div>
+        <div class="next" ng-click="showNextSlide()"></div>
+
         <ul class="buttons" >
             <li ng-repeat="otherSlide in allSlides" ng-class="{'active': currentSlide == otherSlide.id}"
-                ng-click="showSlide(otherSlide)"></li>
+                ng-click="showSlide(otherSlide, $index)"></li>
         </ul>
     </div>
 

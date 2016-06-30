@@ -1,33 +1,46 @@
 'use strict';
 
 var app = angular.module('thaisMartins');
-app.controller('SlideController', ['$scope', '$interval', '$anchorScroll', '$location', 'SlideService', function ($scope, $interval, $anchorScroll, $location, SlideService) {
+app.controller('SlidesController', ['$scope', '$interval', '$anchorScroll', '$location', 'SlideService', function ($scope, $interval, $anchorScroll, $location, SlideService) {
 
     $scope.allSlides = SlideService.getItems();
-    var slidePosition = 0;
+    var slidePosition = -1;
 
     var showSlide = function(nextSlide) {
-        $scope.allSlides.forEach(function(slide){
-            if(slide.id == nextSlide.id)
+        $scope.allSlides.forEach(function(slide) {
+            if(slide.id == nextSlide.id) {
                 $scope.currentSlide = slide.id;
+            }
         });
     };
 
-    var showNextSlide = function() {
-        if(slidePosition > ($scope.allSlides.length -1)) slidePosition = 0;
-        showSlide($scope.allSlides[slidePosition]);
-        slidePosition++;
+    $scope.showSlide = function(nextSlide, position) {
+        slidePosition = position;
+        showSlide(nextSlide);
     };
 
-    //$interval(showNextSlide, 8000);
-    showNextSlide();
+    $scope.showNextSlide = function() {
 
-    $scope.showSlide = function(nextSlide) {
-        showSlide(nextSlide);
+        slidePosition++;
+        if(slidePosition > ($scope.allSlides.length - 1))
+            slidePosition = 0;
+
+        showSlide($scope.allSlides[slidePosition]);
+    };
+
+    $scope.showPrevSlide = function() {
+
+        slidePosition--;
+        if(slidePosition < 0)
+            slidePosition = ($scope.allSlides.length - 1);
+        showSlide($scope.allSlides[slidePosition]);
     };
 
     $scope.goToContact = function () {
         $location.hash('contact');
         $anchorScroll();
     };
+
+    // $interval($scope.showNextSlide, 8000);
+    $scope.showNextSlide();
 }]);
