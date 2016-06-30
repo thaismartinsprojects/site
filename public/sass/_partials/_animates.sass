@@ -1,0 +1,101 @@
+.animate
+  position: relative
+  width: 100%
+  height: 315px
+
+  &.design
+    .computer
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      margin: auto
+      z-index: 3
+
+    .wireframe
+      @include animation(wireframe 5s 4.2s forwards)
+      width: 100%
+      position: absolute
+      opacity: 0
+      top: 0
+      left: 0
+      right: 0
+      margin: auto
+      z-index: 3
+
+    .view
+      position: absolute
+      width: 350px
+      height: 200px
+      bottom: 95px
+      left: 0
+      right: 0
+      margin: auto
+      overflow: hidden
+
+      .lamp
+        @include animation(idea 4s .4s forwards)
+        position: absolute
+        bottom: -100%
+        left: 0
+        right: 0
+        margin: auto
+
+      .lamp-light
+        @include animation(idea-yellow 3s 1.4s forwards)
+        position: absolute
+        opacity: 0
+        bottom: 20px
+        left: 0
+        right: 0
+        margin: auto
+        z-index: 2
+
+@keyframes wireframe
+  0%
+    opacity: 0
+  30%
+    opacity: 1
+    top: 0
+  65%
+    top: -370px
+  75%
+    top: -370px
+  100%
+    opacity: 1
+    top: 0
+
+@keyframes idea
+  0%
+    bottom: -100%
+  20%
+    bottom: 20px
+  99%
+    opacity: 1
+  100%
+    bottom: 20px
+    opacity: 0
+
+@keyframes idea-yellow
+  0%
+    opacity: 0
+  10%
+    opacity: 1
+  20%
+    opacity: .2
+  30%
+    opacity: 1
+  40%
+    opacity: .2
+  50%
+    opacity: 1
+  60%
+    opacity: .2
+  70%
+    opacity: 1
+  80%
+    opacity: .2
+  90%
+    opacity: 1
+  100%
+    opacity: 0
