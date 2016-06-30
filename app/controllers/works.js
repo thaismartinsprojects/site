@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('thaisMartins')
-.controller('WorksController', ['$scope', '$rootScope', 'WorksService', function ($scope, $rootScope, WorksService) {
+.controller('WorksController', ['$scope', '$rootScope', '$filter', 'WorksService', function ($scope, $rootScope, $filter, WorksService) {
 
-    $scope.works = WorksService.getItems();
+    $scope.works = $filter('orderBy')(WorksService.getItems(), '-id');
     $scope.showWork = false;
 
     $scope.seeWork = function(id){

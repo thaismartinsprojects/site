@@ -1,41 +1,36 @@
 <a name="trabalhos"></a>
 
 <div id="works" class="col-xs-12">
+    <div class="col-xxs-12 col-xs-4 nopadding" ng-repeat="work in works"
+         ng-mouseover="showWork = work.id" ng-mouseleave="showWork = ''">
 
-    <div class="col-xs-12 col-sm-4">
-        <h1 class="page-title">Meus <br><strong>Trabalhos</strong><span class="dot"></span></h1>
-        <span class="line"></span>
-    </div>
-
-    <div class="col-xs-12 col-sm-8">
-        <div class="col-xxs-12 col-xs-6 nopadding" ng-repeat="work in works" ng-mouseover="showWork = work.id"
-             ng-mouseleave="showWork = ''">
-
-            <div class="box">
-                <div class="image">
-                    <img ng-src="public/images/works/{{work.path}}/{{work.images[0].image}}" alt="{{work.name}}" alt="{{work.name}}" />
-                </div>
-
-                <div class="details" ng-show="showWork == {{work.id}}">
-
-                    <h1><strong>{{work.name}}</strong></h1>
-                    <p>{{work.shortdescription}}</p>
-
-                    <ul class="buttons">
-                        <li>
-                            <a class="btn btn-secondary-fill btn-small" ng-click="seeWork(work.id)">
-                                <i class="fa fa-search-plus"></i>
-                            </a>
-                        </li>
-                        <li ng-if="work.url" class="hidden-xxs">
-                            <a class="btn btn-secondary-fill btn-small" href="{{work.url}}" target="_blank">
-                                <i class="fa fa-external-link"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="box">
+            <div class="image">
+                <img ng-src="public/images/works/{{work.path}}/{{work.images[0].image}}" alt="{{work.name}}" alt="{{work.name}}" />
             </div>
 
+            <div class="details" ng-class="{'active': showWork == work.id, 'not-active': showWork != work.id}">
+
+                <div class="logo">
+                    <img ng-src="public/images/works/{{work.path}}/logo.png" alt="{{work.name}}" title="{{work.name}}">
+                </div>
+
+                <h1><strong>{{work.name}}</strong></h1>
+                <p>{{work.shortdescription}}</p>
+
+                <ul class="buttons">
+                    <li>
+                        <a class="btn btn-secondary-fill btn-small" ng-click="seeWork(work.id)">
+                            <i class="fa fa-plus"></i>
+                        </a>
+                    </li>
+                    <li ng-if="work.url" class="hidden-xxs">
+                        <a class="btn btn-secondary-fill btn-small" href="{{work.url}}" target="_blank">
+                            <i class="fa fa-external-link"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
