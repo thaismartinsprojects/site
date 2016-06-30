@@ -14,16 +14,28 @@
 
     <div class="form" ng-show="showForm">
 
-        <div class="full-loading" ng-show="sendingContact">
-            <img ng-src="public/images/loading.gif" alt="Enviando..." title="Enviando...">
-            <p>Aguarde.<br>Enviando...</p>
-        </div>
-
         <div class="col-xs-12 col-sm-4">
             <h1>Entre <br><strong>em contato</strong><span class="dot"></span></h1>
             <span class="line"></span>
             <p><a href="mailto:contato@thaismartins.co">contato@thaismartins.co</a></p>
             <p>(11) 94129.3240</p>
+            <ul class="social">
+                <li>
+                    <a href="#" title="GitHub">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="BitBucket">
+                        <i class="fa fa-bitbucket"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="Linkedin">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
         </div>
 
         <div class="col-xs-12 col-sm-8">
@@ -48,8 +60,11 @@
                 <textarea class="form-control" id="message" ng-model="contact.message"></textarea>
             </div>
             <div class="form-group">
-                <button class="btn btn-special-fill btn-center" ng-click="sendEmail()">
-                    <span>Enviar</span>
+
+                <button class="btn btn-special-fill btn-center" ng-click="sendEmail()"
+                        ng-class="{'sending': sendingContact, 'sended': contactSend}">
+                    <span>Enviar <i class="fa fa-check"></i></span>
+                    <span class="progress-line"></span>
                 </button>
             </div>
         </div>

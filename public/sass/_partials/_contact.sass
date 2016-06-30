@@ -31,6 +31,23 @@
       color: $color-soft
 
   .form
+    .social
+      margin: 20px 0
+
+      li
+        display: inline-block
+        padding: 5px 10px
+
+        a
+          @include transition(color .4s)
+          color: $color-special
+          font:
+            size: 2em
+
+          &:hover
+            @include transition(color .4s)
+            color: $color-soft
+
     .warning
       text-align: center
       font-weight: 700
@@ -41,6 +58,40 @@
       &.error
         color: crimson
 
+    .btn
+      i
+        display: none
+        right: initial
+        left: 80px
+
+      &.sended
+        i
+          @include animation(sended .2s 2s forwards)
+          display: block
+          opacity: 1
+
+      &.sending
+        span.progress-line
+          @include rounded(30px)
+          width: 220px
+          height: 40px
+          background:
+            color: $color-special
+
+          &::after
+            @include rounded(30px)
+            content: ''
+            width: 100%
+            height: 100%
+            display: block
+            position: absolute
+            left: 0
+            top: 0
+
+          &::after
+            @include animation(progress 1s infinite)
+            background:
+              color: darken($color-special, 10%)
   .landing
     h1
       text:
@@ -57,6 +108,19 @@
     .btn
       min-width: 300px
       padding: 15px 0
+      position: relative
 
       @media #{$xsmall-max}
         min-width: 250px
+
+@keyframes progress
+  0%
+    width: 5%
+  100%
+    width: 100%
+
+@keyframes sended
+  0%
+    opacity: 1
+  100%
+    opacity: 0
