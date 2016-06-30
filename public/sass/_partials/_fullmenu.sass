@@ -4,7 +4,7 @@
     color: $color-primary
   width: 100%
   height: 0
-  z-index: 2
+  z-index: 9998
   position: fixed
   top: 0
   left: 0
@@ -12,17 +12,38 @@
   overflow: hidden
 
   &.not-active
-    @include animation(slide-up .4s ease forwards)
+    @include animation(slide-up .4s .4s ease forwards)
+    height: 100%
 
     ul
-      top: -1000px
+      li:nth-child(5)
+        @include transition(left .3s .15s)
+        left: -100%
+
+      li:nth-child(4)
+        @include transition(left .3s .2s)
+        left: -100%
+
+      li:nth-child(3)
+        @include transition(left .3s .25s)
+        left: -100%
+
+      li:nth-child(2)
+        @include transition(left .3s .3s)
+        left: -100%
+
+      li:nth-child(1)
+        @include transition(left .3s .35s)
+        left: -100%
 
   &.active
     @include animation(slide-down .4s ease forwards)
 
     ul
-      @include transition(top .4s .3s)
-      top: 0
+      @for $i from 1 through 5
+        li:nth-child(#{$i})
+          @include transition(left .4s #{($i * .1)}s)
+          left: 0
 
   ul
     margin:
@@ -35,12 +56,14 @@
         top: 90px
 
     li
+      text-transform: uppercase
+      position: relative
       padding: 15px
       width: 50%
       margin: 0 auto
       font:
-        weight: 600
-        size: 1.3em
+        weight: 800
+        size: 1.2em
 
       @media #{$xsmall-max}
         width: 90%
@@ -75,7 +98,5 @@
     height: 100%
 
 @keyframes slide-up
-  0%
-    height: 100%
   100%
     height: 0
