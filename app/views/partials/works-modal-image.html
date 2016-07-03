@@ -1,0 +1,14 @@
+<div id="full-work-image" class="col-xs-12" ng-if="currentWorkImage">
+    <div class="close">
+        <a ng-click="hideWorkImage()">
+            fechar <i class="fa fa-times"></i>
+        </a>
+    </div>
+
+    <div class="col-xs-12">
+        <div class="image">
+            <h2>{{currentWorkImage.name}}</h2>
+            <img ng-src="public/images/works/{{currentWork.path}}/{{currentWorkImage.image}}" alt="currentWorkImage">
+        </div>
+    </div>
+</div>

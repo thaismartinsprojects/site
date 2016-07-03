@@ -7,7 +7,7 @@ angular.module('thaisMartins')
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 
     $scope.contact = {};
-    $scope.showForm = true;
+    $scope.showForm = false;
     $scope.contactSend = false;
     $scope.sendingContact = false;
 

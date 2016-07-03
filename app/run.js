@@ -11,4 +11,5 @@ angular.module('thaisMartins')
     };
 
     $rootScope.currentWork = false;
+    $rootScope.currentWorkImage = false;
 }]);

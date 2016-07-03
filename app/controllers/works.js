@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('thaisMartins')
-.controller('WorksController', ['$scope', '$rootScope', '$filter', 'WorksService', function ($scope, $rootScope, $filter, WorksService) {
+.controller('WorksController', ['$scope', '$rootScope', '$location', '$anchorScroll', '$filter', 'WorksService', function ($scope, $rootScope, $location, $anchorScroll, $filter, WorksService) {
 
     $scope.works = $filter('orderBy')(WorksService.getItems(), '-id');
     $scope.showWork = false;
@@ -12,5 +12,17 @@ angular.module('thaisMartins')
 
     $scope.hideWork = function() {
         $rootScope.currentWork = false;
+    };
+
+    $scope.seeWorkImage = function(image){
+        $rootScope.currentWorkImage = image;
+        var content = $('body, html');
+        content.scrollTop(content.height()).animate({ scrollTop: 0});
+    };
+
+    $scope.hideWorkImage = function() {
+        $rootScope.currentWorkImage = false;
+        $location.hash('works');
+        $anchorScroll();
     };
 }]);

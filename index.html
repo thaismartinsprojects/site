@@ -31,12 +31,14 @@
     <![endif]-->
 
     <div ui-view="header"></div>
-    <div class="container-fluid">
+    <div class="container-fluid" ng-class="{'modal-open': currentWorkImage}">
         <div ui-view="slide"></div>
         <div ui-view="about"></div>
         <div ui-view="skills"></div>
         <div ui-view="works"></div>
+        <div ui-view="change-page"></div>
         <div ui-view="works-modal"></div>
+        <div ui-view="works-modal-image"></div>
         <div ui-view="contact"></div>
     </div>
     <div ui-view="footer"></div>
@@ -48,13 +50,6 @@
 
     <script>
         window.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        $(function() {
-            lightbox.option({
-                'resizeDuration': 200,
-                'wrapAround': true,
-                'showImageNumberLabel': false
-            });
-        });
     </script>
 </body>
 </html>

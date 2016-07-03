@@ -1,6 +1,6 @@
 <div id="full-work" class="col-xs-12" ng-hide="!currentWork">
 
-    <div class="button col-xxs-12">
+    <div class="close-btn">
         <a ng-click="hideWork()">
             fechar <i class="fa fa-times"></i>
         </a>
@@ -19,11 +19,10 @@
     <div class="col-xs-8 col-xxs-12">
         <ul class="photos">
             <li ng-repeat="img in currentWork.images" class="col-xs-6 col-xxs-12">
-                <a href="public/images/works/{{currentWork.path}}/{{img.image}}" data-lightbox="{{currentWork.path}}" data-title="{{img.name}}">
-                    <img ng-src="public/images/works/{{currentWork.path}}/{{img.image}}" alt="{{img.name}}" title="{{img.name}}">
-                </a>
+                <img ng-src="public/images/works/{{currentWork.path}}/{{img.image}}"
+                     alt="{{img.name}}" title="{{img.name}}"
+                        ng-click="seeWorkImage(img)">
             </li>
         </ul>
     </div>
-
 </div>

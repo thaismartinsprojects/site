@@ -1,0 +1,38 @@
+#full-work-image
+  width: 100%
+  z-index: 9998
+  position: absolute
+  top: 0
+  left: 0
+
+  .close
+    position: absolute
+    top: 20px
+    right: 20px
+    z-index: 5
+    opacity: 1
+    text-shadow: none
+    text-transform: uppercase
+    font:
+      weight: 800
+      size: .8em
+
+    a
+      color: $color-special
+
+      &:hover
+        color: $color-soft
+
+  .image
+    padding: 10px 100px
+    text-align: center
+
+    h2
+      @extend %h1
+      text-align: center
+      color: $color-soft
+      margin:
+        bottom: 20px
+
+    img
+      max-width: 100%

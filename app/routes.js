@@ -32,12 +32,20 @@ angular.module('thaisMartins', [
                     templateUrl: 'app/views/skills.html',
                     controller: 'SkillsController'
                 },
+                'change-page@': {
+                    templateUrl: 'app/views/partials/change-page.html',
+                    controller: 'WorksController'
+                },
                 'works@': {
                     templateUrl: 'app/views/works.html',
                     controller: 'WorksController'
                 },
                 'works-modal@': {
-                    templateUrl: 'app/views/works-modal.html',
+                    templateUrl: 'app/views/partials/works-modal.html',
+                    controller: 'WorksController'
+                },
+                'works-modal-image@': {
+                    templateUrl: 'app/views/partials/works-modal-image.html',
                     controller: 'WorksController'
                 },
                 'contact@': {

@@ -1,5 +1,6 @@
-<div id="main" class="col-xs-12">
+<a name="home"></a>
 
+<div id="main" class="col-xs-12">
     <div id="slides" class="col-xs-12">
         <div class="slide" ng-repeat="slide in allSlides" ng-show="currentSlide == slide.id"
             ng-class="{'right': $index % 2 != 0}">
@@ -26,5 +27,4 @@
                 ng-click="showSlide(otherSlide, $index)"></li>
         </ul>
     </div>
-
 </div>

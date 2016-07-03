@@ -12,15 +12,12 @@ var jsFiles = [
     'bower_components/angular/angular.min.js',
     'bower_components/angular-ui-router/release/angular-ui-router.min.js',
     'bower_components/bootstrap/dist/js/bootstrap.min.js',
-    'bower_components/lightbox2/dist/js/lightbox.min.js',
-    'bower_components/angular-ui-mask/dist/mask.min.js',
-    'bower_components/fullpage.js/jquery.fullPage.min.js'
+    'bower_components/angular-ui-mask/dist/mask.min.js'
 ];
 
 var cssFiles = [
     'bower_components/bootstrap/dist/css/bootstrap.min.css',
-    'bower_components/fontawesome/css/font-awesome.min.css',
-    'bower_components/lightbox2/dist/css/lightbox.css'
+    'bower_components/fontawesome/css/font-awesome.min.css'
 ];
 
 function logError(error) {
