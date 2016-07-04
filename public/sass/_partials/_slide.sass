@@ -4,27 +4,15 @@
   display: block
   padding: 0
   overflow: hidden
-  //
-  //&::after
-  //  @include skewX(-20deg)
-  //  @include transition(left .5s)
-  //  content: ''
-  //  display: block
-  //  width: 50%
-  //  height: 100%
-  //  position: absolute
-  //  top: 0
-  //  left: 0
-  //  background:
-  //    color: rgba(255,255,255,.1)
-  //
-  //&:hover
-  //  &::after
-  //    left: 70%
-
+  margin:
+    top: 50px
 
   .slide
+    width: 100%
     padding: 0 100px
+
+    @media #{$small-max}
+      padding: 0 40px
 
     &::after
       @include skewX(20deg)
@@ -52,7 +40,7 @@
       @media #{$small-max}
         margin:
           top: 0
-        padding: 40px 0
+        padding: 20px 0 0
 
       p
         @extend %p
@@ -71,6 +59,7 @@
         @media #{$small-max}
           display: block
           text-align: center
+          margin: auto
 
     .image
       position: absolute
@@ -110,6 +99,9 @@
     background:
       image: url('../images/prev.png')
 
+    @media #{$small-max}
+      display: none
+
     &:hover
       @include transition(width .4s)
       width: 65px
@@ -133,6 +125,9 @@
     width: 100%
     bottom: 40px
     z-index: 3
+
+    @media #{$small-max}
+      bottom: 10px
 
     li
       @include rounded(50%)

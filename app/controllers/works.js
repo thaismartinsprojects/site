@@ -6,6 +6,8 @@ angular.module('thaisMartins')
     $scope.works = $filter('orderBy')(WorksService.getItems(), '-id');
     $scope.showWork = false;
 
+    // $rootScope.currentWork = WorksService.getItem(1);
+
     $scope.seeWork = function(id){
         $rootScope.currentWork = WorksService.getItem(id);
     };

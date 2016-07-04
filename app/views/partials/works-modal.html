@@ -19,9 +19,10 @@
     <div class="col-xs-8 col-xxs-12">
         <ul class="photos">
             <li ng-repeat="img in currentWork.images" class="col-xs-6 col-xxs-12">
-                <img ng-src="public/images/works/{{currentWork.path}}/{{img.image}}"
-                     alt="{{img.name}}" title="{{img.name}}"
-                        ng-click="seeWorkImage(img)">
+                <div class="image" ng-click="seeWorkImage(img)">
+                    <img ng-src="public/images/works/{{currentWork.path}}/{{img.image}}"
+                         alt="{{img.name}}" title="{{img.name}}">
+                </div>
             </li>
         </ul>
     </div>
