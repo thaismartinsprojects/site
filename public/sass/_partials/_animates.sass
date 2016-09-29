@@ -5,9 +5,14 @@
   overflow: hidden
 
   &.design
+    &.active
+      .computer
+        @include animation(design-computer 1s .2s forwards)
+
+      .wireframe
+        @include animation(wireframe 5s 4.2s forwards)
 
     .computer
-      @include animation(design-computer 1s .2s forwards)
       position: absolute
       left: 0
       right: 0
@@ -16,7 +21,6 @@
       z-index: 3
 
     .wireframe
-      @include animation(wireframe 5s 4.2s forwards)
       width: 100%
       position: absolute
       opacity: 0

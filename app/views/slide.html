@@ -2,12 +2,8 @@
 
 <div id="main" class="col-xs-12">
     <div id="slides" class="col-xs-12">
-        <div class="slide" ng-repeat="slide in allSlides" ng-show="currentSlide == slide.id"
-            ng-class="{'right': $index % 2 != 0}">
-
-            <div class="image">
-                <img ng-src="public/images/slides/{{slide.image}}" alt="{{slide.name}}" alt="{{slide.name}}" />
-            </div>
+        <div class="slide" ng-repeat="slide in allSlides" ng-class="{'active': currentSlide == slide.id}"
+            style="background-image: url('public/images/slides/{{slide.image}}')">
 
             <div class="content col-xs-12">
                 <h1 ng-bind-html="slide.name | splitWords:'dot'"></h1>

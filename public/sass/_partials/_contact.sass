@@ -1,5 +1,8 @@
 #contact
   @extend %page
+  padding:
+    left: 40px
+    right: 40px
   background:
     color: $color-secondary
 
@@ -8,6 +11,15 @@
       top: 0
     padding:
       top: 0
+
+  &.active
+    .landing
+      h1
+        top: 100px
+
+      .arrow,
+      .btn
+        opacity: 1
 
   p
     color: $color-soft
@@ -29,6 +41,7 @@
     h1
       @extend %h1
       color: $color-soft
+      margin: auto
 
   .form
     .social
@@ -42,7 +55,7 @@
           @include transition(color .4s)
           color: $color-special
           font:
-            size: 2em
+            size: 1.6em
 
           &:hover
             @include transition(color .4s)
@@ -66,7 +79,7 @@
 
       &.sended
         i
-          @include animation(sended .2s 2s forwards)
+          @include animation(sended .3s 4s forwards)
           display: block
           opacity: 1
 
@@ -93,22 +106,33 @@
             background:
               color: darken($color-special, 10%)
   .landing
+    position: relative
+
     h1
+      @include transition(top .3s)
+      position: absolute
+      top: -100%
+      left: 0
+      right: 0
       text:
         align: center
 
     .arrow
+      @include animation(up-down 1.2s infinite)
+      @include transition(opacity .3s .7s)
+      opacity: 0
       width: 60px
-      margin: 40px auto
-      -webkit-animation: up-down 1.2s infinite
-      animation: up-down 1.2s infinite
+      margin: 160px auto 40px
+
       img
         width: 100%
 
     .btn
+      @include transition(opacity .3s .4s)
       min-width: 300px
       padding: 15px 0
       position: relative
+      opacity: 0
 
       @media #{$xsmall-max}
         min-width: 250px

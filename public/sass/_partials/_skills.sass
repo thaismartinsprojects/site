@@ -1,7 +1,5 @@
 #skills
   @extend %page
-  background:
-    color: $color-primary-soft
 
   @media #{$small-max}
     margin:
@@ -52,18 +50,43 @@
         color: $color-dark
 
   .skill
-    margin:
-      top: 50px
-      bottom: 50px
     width: 100%
-    text:
-      align: center
+    height: 100%
+    overflow: hidden
+    padding: 0 40px
+
+    &:nth-child(odd)
+      background:
+        color: $color-primary-soft
+
+    .call
+      @include transition(left .2s)
+      position: relative
+      left: -100%
+      margin:
+        top: 50px
+        bottom: 50px
+
+      &.active
+        left: 0
+
+    .text
+      @include transition(right .3s)
+      position: relative
+      right: -100%
+      margin:
+        top: 50px
+        bottom: 50px
+
+      &.active
+        right: 0
 
     ul
       text-align: center
       width: 100%
 
       li
+        @include transition(all .3s)
         @include rounded(30px)
         font:
           weight: 300
@@ -80,6 +103,11 @@
         @media #{$xsmall-max}
           font:
             size: .6em
+
+        &:hover
+          background:
+            color: $color-special
+          color: $color-soft
 
         i
           margin:

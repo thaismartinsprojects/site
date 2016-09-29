@@ -134,8 +134,14 @@
       @include box-shadow(0, 0, 0, 1px, $color, true)
       @include transition(box-shadow .15s, transform .2s)
 
-@mixin animation($animate)
-  -webkit-animation: $animate
-  -moz-animation: $animate
-  -o-animation: $animate
-  animation: $animate
+@mixin animation($animateOne, $animateTwo: false)
+  @if $animateTwo
+    -webkit-animation: $animateOne, $animateTwo
+    -moz-animation: $animateOne, $animateTwo
+    -o-animation: $animateOne, $animateTwo
+    animation: $animateOne, $animateTwo
+  @else
+    -webkit-animation: $animateOne
+    -moz-animation: $animateOne
+    -o-animation: $animateOne
+    animation: $animateOne
