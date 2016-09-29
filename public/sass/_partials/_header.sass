@@ -1,10 +1,10 @@
 header
+  @include transition(all .2s .25s)
   height: $height-header
   position: fixed !important
   padding: 0 !important
   margin: 0 !important
   z-index: 9997
-  color: $color-soft
   background:
     color: $color-primary
 
@@ -26,18 +26,17 @@ header
         top: 7px
 
     .title
+      @include transition(all .2s)
       float: left
       color: $color-secondary
       letter-spacing: -1px
-      padding: 10px 15px 10px 85px
+      padding: 10px 25px
       margin:
         top: 15px
       font:
         size: 1.5em
 
       @media #{$xsmall-max}
-        padding:
-          left: 45px
         margin:
           top: 4px
 
@@ -49,11 +48,10 @@ header
         margin: 0
 
   nav
-    color: $color-secondary
-
     p
       float: right
       text-transform: uppercase
+      color: $color-secondary
       font:
         weight: 800
         size: 0.8em
@@ -67,10 +65,9 @@ header
           top: 30px
           right: 10px
 
-      &.menu
         @media #{$xsmall-max}
           margin:
-            top: 17px
+            top: 20px
 
     ul
       float: right
@@ -93,14 +90,20 @@ header
 
 
   &.active
+    @include transition(all .2s)
+    background:
+      color: transparent
+
+    .title
+      color: $color-soft
+
     nav
       p
+        @include transition(all 2s)
+        color: $color-soft
+
         &.back
           display: block
-
-          @media #{$xsmall-max}
-            margin:
-              top: 17px
 
         &.menu
           display: none
@@ -114,6 +117,9 @@ header
             top: 13px
 
         li
+          background:
+            color: $color-soft
+
           &:first-child
             @include rotate(45)
             margin:
