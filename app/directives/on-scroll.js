@@ -9,7 +9,7 @@ app.directive('onScroll', function() {
             if(typeof attr.onScroll == 'undefined') return false;
 
             $(window).scroll(function() {
-                var startPosition = $(element).offset().top - ($(window).height() / 2);
+                var startPosition = $(element).offset().top - ($(window).height() / 1.5);
                 var position = $(window).scrollTop();
 
                 if(position >= startPosition)

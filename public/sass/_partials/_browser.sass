@@ -1,0 +1,186 @@
+.browser
+  @include border-radius(5px)
+  width: 360px
+  overflow: hidden
+  height: 420px
+  border: 1px solid $color-skills-gray-soft
+  margin: 0 auto 20px
+  position: relative
+
+  .top
+    position: absolute
+    top: 0
+    width: 100%
+    height: 55px
+    background:
+      color: $color-skills-gray-soft
+  
+    .btns
+      width: 40px
+      margin: 5px 10px
+      z-index: 2
+  
+      .btn
+        @include border-radius(100%)
+        padding: 0
+        width: 8px
+        height: 8px
+        display: inline-block
+  
+        &.btn-yellow
+          background:
+            color: $color-skills-yellow
+  
+        &.btn-red
+          background:
+            color: $color-skills-red
+  
+        &.btn-green
+          background:
+            color: $color-skills-green
+  
+    .directionals
+      float: left
+      width: 45px
+      margin:
+        left: 10px
+  
+      .btn
+        @include border-radius(3px)
+        width: 20px
+        height: 15px
+        padding: 0
+        background:
+          color: $color-skills-gray
+        display: inline-block
+  
+    .inputs
+      float: left
+      width: calc(100% - 55px)
+      text-align: center
+  
+      .input
+        @include border-radius(3px)
+        height: 15px
+        display: inline-block
+        padding: 0
+        background:
+          color: #fff
+  
+        &.input-lg
+          width: 60%
+  
+        &.input-sm
+          width: 30%
+          margin:
+            left: 2%
+            
+  .body
+    .menu
+      width: 100%
+      height: 30px
+      background:
+        color: lighten($color-skills-blue, 15%)
+      margin:
+        top: 55px
+  
+      .logo
+        width: 80px
+        height: 20px
+        margin: 5px 20px
+        display: inline-block
+        background:
+          color: $color-skills-blue
+  
+      .item
+        width: 50px
+        height: 14px
+        margin: 8px
+        display: inline-block
+        float: right
+        background:
+          color: lighten($color-skills-blue, 10%)
+  
+    .banner
+      width: 100%
+      height: 160px
+      display: flex
+      position: relative
+      background:
+        color: $color-skills-blue
+  
+      .phone
+        @include border-radius(15px, 'top-left')
+        @include border-radius(15px, 'top-right')
+        width: 28%
+        height: 140px
+        position: absolute
+        right: 70px
+        bottom: 0
+        z-index: 2
+        background:
+          color: #262626
+  
+        &.back
+          right: 25px
+          height: 120px
+          background:
+            color: #181818
+          z-index: 1
+  
+      .txt,
+      .slogan,
+      .btn
+        position: absolute
+        left: 20px
+        display: block
+        margin: 0 auto
+        background:
+          color: lighten($color-skills-blue, 10%)
+  
+      .txt
+        top: 50px
+        width: 40%
+        height: 40px
+  
+      .slogan
+        top: 95px
+        width: 35%
+        height: 20px
+  
+      .btn
+        @include border-radius(0)
+        top: 120px
+        width: 15%
+        height: 15px
+        background:
+          color: $color-skills-pink
+  
+    .content
+      width: 90%
+      margin: 20px auto
+  
+      .card
+        width: 28%
+        display: inline-block
+        margin: 0 2%
+  
+        .image
+          width: 100%
+          height: 80px
+          background:
+            color: $color-skills-gray
+  
+        .txt
+          width: 100%
+          height: 12px
+          margin: 5px 0
+          border: 5px double $color-skills-gray
+          box-sizing: border-box
+  
+        .btn
+          @include border-radius(0)
+          width: 50%
+          height: 15px
+          background:
+            color: $color-skills-pink

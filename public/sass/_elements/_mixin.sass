@@ -8,10 +8,15 @@
     -moz-box-shadow: $top $left $spreat $blur $color
     box-shadow: $top $left $spreat $blur $color
 
-@mixin border-radius($radius: 0.5em)
-  -webkit-border-radius: $radius
-  -moz-border-radius: $radius
-  border-radius: $radius
+@mixin border-radius($value, $position: false)
+  @if $position
+    -webkit-border-#{$position}-radius: $value
+    -moz-border-#{$position}-radius: $value
+    border-#{$position}-radius: $value
+  @else
+    -webkit-border-radius: $value
+    -moz-border-radius: $value
+    border-radius: $value
 
 @mixin transparency($percentage)
   -moz-opacity: $percentage
