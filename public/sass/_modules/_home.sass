@@ -3,33 +3,18 @@
   height: 100%
   min-height: 650px
   display: inline-table
-  background:
-    color: $color-secondary
-  -webkit-background-size: cover
-  -moz-background-size: cover
-  -o-background-size: cover
-  color: $color-soft
 
   @media #{$small-max}
     min-height: 350px
 
   h1
     @extend %h1
+    font-weight: 800
 
-    @media #{$xsmall-max}
-      text:
-        align: center
-
-    b,
-    strong
-      font-weight: 800
+  h3
+    @extend %h3
 
   .line
-    @media #{$xsmall-max}
-      margin:
-        left: auto
-        right: auto
-  p
-    @media #{$xsmall-max}
-      text:
-        align: center
+    margin:
+      left: auto
+      right: auto

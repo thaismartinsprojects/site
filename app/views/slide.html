@@ -2,25 +2,18 @@
 
 <div id="main" class="col-xs-12">
     <div id="slides" class="col-xs-12">
-        <div class="slide" ng-repeat="slide in allSlides" ng-class="{'active': currentSlide == slide.id}"
-            style="background-image: url('public/images/slides/{{slide.image}}')">
-
+        <div class="slide active">
             <div class="content col-xs-12">
-                <h1 ng-bind-html="slide.name | splitWords:'dot'"></h1>
+                <h1>Desenvolvimento Web e Mobile</h1>
+                <h3>Sites responsivos, sistemas para internet e aplicativos</h3>
                 <span class="line"></span>
-                <p>{{slide.description}}</p>
-                <button ng-click="goToContact()" class="btn btn-special-fill">
+                <button ng-click="goToContact()" class="btn btn-special-fill btn-center">
                     <span>Peça um orçamento</span>
                 </button>
             </div>
+            <div class="image">
+                <img src="public/images/devices.png" alt="Thais Martins">
+            </div>
         </div>
-
-        <div class="prev" ng-click="showPrevSlide()"></div>
-        <div class="next" ng-click="showNextSlide()"></div>
-
-        <ul class="buttons" >
-            <li ng-repeat="otherSlide in allSlides" ng-class="{'active': currentSlide == otherSlide.id}"
-                ng-click="showSlide(otherSlide, $index)"></li>
-        </ul>
     </div>
 </div>
