@@ -1,7 +1,7 @@
 #full-menu
   display: block
   background:
-    color: $color-secondary
+    color: $color-primary
   width: 100%
   z-index: 9996
   position: fixed
@@ -14,7 +14,7 @@
     @include transition(all .6s)
     height: 0
     background:
-      color: $color-primary
+      color: $color-secondary
 
     ul
       @for $i from 1 through 5
@@ -61,11 +61,9 @@
         margin: 10px auto
         width: 0
         height: 2px
-        background:
-          color: $color-primary-dark
 
       a
-        color: $color-soft
+        color: $color-secondary
 
       &:hover
         a

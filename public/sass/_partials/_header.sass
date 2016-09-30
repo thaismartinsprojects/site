@@ -6,7 +6,7 @@ header
   margin: 0 !important
   z-index: 9997
   background:
-    color: $color-primary
+    color: $color-secondary
 
   @media #{$xsmall-max}
     height: 50px
@@ -15,20 +15,10 @@ header
     padding: 0
     position: relative
 
-    img
-      position: absolute
-      max-width: 35px
-      left: 40px
-      top: 18px
-
-      @media #{$small-max}
-        left: 7px
-        top: 7px
-
     .title
       @include transition(all .2s)
       float: left
-      color: $color-secondary
+      color: $color-soft
       letter-spacing: -1px
       padding: 10px 25px
       margin:
@@ -51,7 +41,7 @@ header
     p
       float: right
       text-transform: uppercase
-      color: $color-secondary
+      color: $color-soft
       font:
         weight: 800
         size: 0.8em
@@ -83,7 +73,7 @@ header
       li
         @include transition(all .4s)
         background:
-          color: $color-secondary
+          color: $color-soft
         height: 2px
         width: 30px
         margin: 6px 0
@@ -95,12 +85,12 @@ header
       color: transparent
 
     .title
-      color: $color-soft
+      color: $color-secondary
 
     nav
       p
         @include transition(all 2s)
-        color: $color-soft
+        color: $color-secondary
 
         &.back
           display: block
@@ -118,7 +108,7 @@ header
 
         li
           background:
-            color: $color-soft
+            color: $color-secondary
 
           &:first-child
             @include rotate(45)
