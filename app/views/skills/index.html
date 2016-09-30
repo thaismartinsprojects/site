@@ -8,13 +8,11 @@
         </div>
 
         <div class="col-xs-12 col-sm-8 text" on-scroll="active">
-            <div class="col-xs-12 animate design" on-scroll="active">
-                <img src="public/images/icons/pc.png" alt="PC" class="computer">
-                <div class="view">
-                    <img src="public/images/icons/wireframe.jpg" alt="Wireframe" class="wireframe">
-                    <img src="public/images/icons/idea.png" alt="Ideia" class="lamp">
-                    <img src="public/images/icons/idea-yellow.png" alt="Ideia" class="lamp-light">
-                </div>
+            <div class="col-xs-12" on-scroll="active">
+                <ng-include src="'app/views/skills/design.html'" ng-if="skill.name == 'design'"></ng-include>
+                <ng-include src="'app/views/skills/frontend.html'" ng-if="skill.name == 'frontend'"></ng-include>
+                <ng-include src="'app/views/skills/backend.html'" ng-if="skill.name == 'backend'"></ng-include>
+                <ng-include src="'app/views/skills/apps.html'" ng-if="skill.name == 'apps'"></ng-include>
             </div>
             <div class="col-xs-12">
                 <ul>

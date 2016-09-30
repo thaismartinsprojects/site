@@ -1,0 +1,167 @@
+.photoshop
+  width: 300px
+  height: 450px
+  margin: auto
+
+  .rulers
+    width: 100%
+    height: 10px
+    background:
+      image: url('../images/rulers.png')
+      color: $color-skills-gray-soft
+    border:
+      bottom: 3px dotted $color-skills-gray
+
+  .tools
+    @include border-radius(2px)
+    width: 30px
+    height: 200px
+    margin: 10px
+    display: block
+    padding: 5px 0
+    float: left
+    background:
+      color: $color-skills-gray-soft
+    border-top: 8px solid $color-skills-gray-dark
+
+    .block
+      @include border-radius(2px)
+      width: 10px
+      height: 10px
+      background:
+        color: $color-skills-gray-dark
+      margin: 7px 10px
+      position: relative
+
+      &:before
+        content: ''
+        display: block
+        width: 2px
+        height: 2px
+        background:
+          color: darken($color-skills-gray-dark, 15%)
+        position: absolute
+        bottom: -2px
+        right: -4px
+
+      &.active
+        @include border-radius(0)
+        width: 100%
+        position: relative
+        margin: 0
+        height: 24px
+        background:
+          color: $color-skills-gray
+
+        &:before
+          @include border-radius(2px)
+          content: ''
+          display: block
+          width: 10px
+          height: 10px
+          background:
+            color: $color-skills-gray-dark
+          position: absolute
+          top: 0
+          bottom: 0
+          left: 0
+          right: 0
+          margin: auto
+
+    .colors
+      position: relative
+      width: 80%
+      height: 25px
+      border:
+        top: 1px solid $color-skills-gray
+        bottom: 1px solid $color-skills-gray
+      margin: auto
+
+      .block
+        position: absolute
+        margin: 0
+        border: 2px solid #fff
+
+        &:before
+          width: 0
+          height: 0
+
+        &:nth-child(1)
+          left: 9px
+          top: 7px
+          background:
+            color: $color-skills-red
+
+        &:nth-child(2)
+          right: 9px
+          top: 2px
+          background:
+            color: $color-skills-yellow
+
+
+  .body
+    @include border-radius(3px)
+    width: 225px
+    float: left
+    margin: 10px
+    overflow: hidden
+    border: 1px solid $color-skills-gray
+
+    .banner
+      width: 100%
+      height: 140px
+      display: flex
+      position: relative
+      background:
+        color: $color-skills-gray
+
+      .txt
+        position: absolute
+        left: 0
+        right: 0
+        top: 60px
+        display: block
+        width: 40%
+        height: 30px
+        background:
+          color: darken($color-skills-gray, 4%)
+        margin: 0 auto
+
+      .slogan
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 10px
+        width: 35%
+        height: 15px
+        background:
+          color: darken($color-skills-gray, 4%)
+        margin: 50px auto 20px
+
+    .content
+      width: 90%
+      margin: 20px auto
+
+      .card
+        width: 28%
+        display: inline-block
+        margin: 0 1.8%
+
+        .image
+          width: 100%
+          height: 80px
+          background:
+            color: $color-skills-gray
+
+        .txt
+          width: 100%
+          height: 12px
+          margin: 5px 0
+          border: 5px double $color-skills-gray
+          box-sizing: border-box
+
+        .btn
+          width: 50%
+          height: 15px
+          background:
+            color: $color-skills-gray
