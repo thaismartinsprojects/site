@@ -19,12 +19,23 @@
       padding: 0 40px
 
     &.active
-      h1
+      h1,
+      h3,
+      .line
         top: 0 !important
 
+      button
+        opacity: 1 !important
+
+      .image
+        bottom: 0
+
     .image
+      @include transition(all .4s)
       width: 100%
       line-height: 0
+      position: relative
+      bottom: -1000px
 
       img
         max-width: 100%
@@ -45,6 +56,12 @@
         position: relative
         top: -1000px
 
+      h3
+        @include transition(all .3s .3s)
+        width: 100%
+        position: relative
+        top: -1000px
+
       p
         @extend %p
         min-height: 105px
@@ -53,8 +70,15 @@
           font:
             size: 1em
 
+      .line
+        @include transition(all .3s .4s)
+        position: relative
+        top: -1000px
+
       button
+        @include transition(all .3s 1s)
         padding: 10px 20px
+        opacity: 0
 
   .prev,
   .next

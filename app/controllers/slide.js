@@ -1,8 +1,9 @@
 'use strict';
 
 var app = angular.module('thaisMartins');
-app.controller('SlidesController', ['$scope', '$interval', '$anchorScroll', '$location', 'SlideService', function ($scope, $interval, $anchorScroll, $location, SlideService) {
+app.controller('SlidesController', ['$scope', '$timeout', '$anchorScroll', '$location', 'SlideService', function ($scope, $timeout, $anchorScroll, $location, SlideService) {
 
+    $scope.isLoaded = false;
     $scope.allSlides = SlideService.getItems();
     var slidePosition = -1;
 
@@ -41,6 +42,9 @@ app.controller('SlidesController', ['$scope', '$interval', '$anchorScroll', '$lo
         $anchorScroll();
     };
 
+    $timeout(function() {
+        $scope.isLoaded = true;
+    }, 300);
     // $interval($scope.showNextSlide, 8000);
     $scope.showNextSlide();
 }]);
