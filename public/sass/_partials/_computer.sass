@@ -1,0 +1,188 @@
+.computer
+  width: 350px
+  height: 400px
+  margin: auto
+
+  .screen
+    @include border-radius(10px)
+    position: relative
+    background:
+      color: $color-dark
+    border:
+      top: 15px solid $color-dark
+      right: 15px solid $color-dark
+      bottom: 35px solid $color-dark
+      left: 15px solid $color-dark
+
+    &:after
+      @include border-radius(100%)
+      content: ''
+      display: block
+      position: absolute
+      bottom: -25px
+      left: 0
+      right: 0
+      margin: auto
+      width: 15px
+      height: 15px
+      background:
+        color: lighten($color-skills-gray, 5%)
+
+    &:before
+      @include border-radius(10px, 'bottom-left')
+      @include border-radius(10px, 'bottom-right')
+      content: ''
+      display: block
+      position: absolute
+      bottom: -36px
+      left: -15px
+      width: calc(100% + 30px)
+      height: 40px
+      background:
+        color: $color-skills-gray
+
+    .browser
+      @include border-radius(5px)
+      width: 100%
+      overflow: hidden
+      height: 190px
+      position: relative
+      background:
+        color: #fff
+      border: none
+
+  .support
+    $heigth-support: 25px
+    border-top: 3px solid darken($color-skills-gray, 5%)
+    border-bottom: $heigth-support solid $color-skills-gray
+    border-left: ($heigth-support / 4) solid transparent
+    border-right: ($heigth-support / 4) solid transparent
+    height: 0
+    width: ($heigth-support * 2)
+    position: relative
+    margin: 0 auto
+
+    &:before
+      content: ""
+      position: absolute
+      top: 25px
+      left: -32px
+      border-bottom: ($heigth-support / 2) solid $color-skills-gray
+      border-left: $heigth-support solid transparent
+      border-right: $heigth-support solid transparent
+      height: 0
+      width: ($heigth-support * 4)
+      
+  .top
+    position: absolute
+    top: 0
+    width: 100%
+    height: 40px
+    background:
+      color: $color-skills-gray-soft
+  
+    .btns
+      width: 100px
+      margin: 0 10px
+      z-index: 2
+  
+      .btn
+        @include border-radius(50%)
+        width: 5px
+        height: 5px
+        display: inline-block
+  
+        &.btn-yellow
+          background:
+            color: $color-skills-yellow
+  
+        &.btn-red
+          background:
+            color: $color-skills-red
+  
+        &.btn-green
+          background:
+            color: $color-skills-green
+  
+    .directionals
+      float: left
+      width: 45px
+      margin:
+        left: 10px
+  
+      .btn
+        @include border-radius(3px)
+        width: 20px
+        height: 15px
+        background:
+          color: $color-skills-gray
+        display: inline-block
+  
+    .inputs
+      float: left
+      width: calc(100% - 55px)
+      text-align: center
+  
+      .input
+        @include border-radius(3px)
+        height: 15px
+        display: inline-block
+        background:
+          color: #fff
+  
+        &.input-lg
+          width: 60%
+  
+        &.input-sm
+          width: 30%
+          margin:
+            left: 2%
+            
+  .body
+    .menu
+      width: 20%
+      height: 150px
+      float: left
+      background:
+        color: lighten($color-skills-blue, 15%)
+      margin:
+        top: 40px
+      border:
+        top: 30px solid $color-skills-blue
+  
+    .form
+      width: 80%
+      float: left
+      height: 150px
+      margin:
+        top: 40px
+      padding: 20px 10px
+      box-sizing: border-box
+  
+      .title
+        width: 40%
+        height: 15px
+        margin:
+          bottom: 10px
+        background:
+          color: $color-skills-gray
+  
+      .input
+        @include border-radius(0)
+        width: 100%
+        height: 15px
+        border: 1px solid $color-skills-gray
+        margin: 10px auto
+  
+        &.input-sm
+          width: 49.1%
+          display: inline-block
+          margin: 0
+  
+      .btn
+        @include border-radius(0)
+        width: 20%
+        height: 15px
+        margin: 10px 0
+        background:
+          color: $color-skills-pink

@@ -2,7 +2,7 @@
   @include border-radius(5px)
   width: 360px
   overflow: hidden
-  height: 420px
+  height: 430px
   border: 1px solid $color-skills-gray-soft
   margin: 0 auto 20px
   position: relative
@@ -173,11 +173,13 @@
   
         .txt
           width: 100%
-          height: 12px
+          height: 11px
           margin: 5px 0
-          border: 5px double $color-skills-gray
+          border:
+            top: 5px double $color-skills-gray
+            bottom: 5px double $color-skills-gray
           box-sizing: border-box
-  
+
         .btn
           @include border-radius(0)
           width: 50%

@@ -1,0 +1,136 @@
+.iphone
+  @include border-radius(35px)
+  width: 220px
+  height: 420px
+  margin: 0 auto 20px
+  background:
+    color: $color-dark
+  border:
+    top: 45px solid $color-dark
+    right: 7px solid $color-dark
+    bottom: 45px solid $color-dark
+    left: 7px solid $color-dark
+
+  .screen
+    @include border-radius(3px)
+    position: relative
+    width: 100%
+    height: 330px
+    background:
+      color: #fff
+
+    &:after
+      @include border-radius(100%)
+      content: ''
+      display: block
+      position: absolute
+      bottom: -38px
+      left: 0
+      right: 0
+      margin: auto
+      width: 30px
+      height: 30px
+      border: 3px double lighten($color-dark, 10%)
+      background:
+        color: lighten($color-dark, 2%)
+
+    &:before
+      @include border-radius(10px)
+      content: ''
+      display: block
+      position: absolute
+      top: -15px
+      left: 0
+      right: 0
+      margin: auto
+      width: 20%
+      height: 3px
+      background:
+        color: lighten($color-dark, 7%)
+
+    .input
+      width: 90%
+      margin: 10px auto
+      height: 25px
+      border: 1px solid $color-skills-gray
+
+    .image
+      width: 90%
+      margin: 10px auto
+      height: 60px
+      background:
+        color: lighten($color-skills-gray-dark, 5%)
+
+    .card
+      padding:
+        left: 60px
+      position: relative
+      height: 50px
+      margin: 5px 0
+
+      .circle
+        @include border-radius(100%)
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 10px
+        width: 40px
+        height: 40px
+        background:
+          color: darken($color-skills-gray, 5%)
+        margin: auto
+
+      .txt
+        width: 90%
+        height: 40px
+        background:
+          color: $color-skills-gray
+        margin: 5px auto
+        display: inline-block
+
+  .top
+    @include border-radius(2px, 'top-left')
+    @include border-radius(2px, 'top-right')
+    position: relative
+    width: 100%
+    height: 50px
+    background:
+      color: $color-skills-blue
+    border:
+      top: 10px solid lighten($color-dark, 10%)
+  
+    .logo
+      height: 25px
+      width: 80px
+      position: absolute
+      top: 8px
+      left: 0
+      right: 0
+      margin: auto
+      background:
+        color: lighten($color-skills-blue, 5%)
+  
+    .menu
+      height: 3px
+      width: 30px
+      margin: 17px 10px
+      position: relative
+      background:
+        color: lighten($color-skills-blue, 10%)
+  
+      &:after,
+      &:before
+        content: ''
+        display: block
+        height: 3px
+        width: 100%
+        position: absolute
+        left: 0
+        background:
+          color: lighten($color-skills-blue, 10%)
+  
+      &:before
+        top: -6px
+  
+      &:after
+        bottom: -7px

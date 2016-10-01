@@ -5,7 +5,7 @@
 
   .rulers
     width: 100%
-    height: 10px
+    height: 15px
     background:
       image: url('../images/rulers.png')
       color: $color-skills-gray-soft
@@ -15,7 +15,7 @@
   .tools
     @include border-radius(2px)
     width: 30px
-    height: 200px
+    height: 180px
     margin: 10px
     display: block
     padding: 5px 0
@@ -90,13 +90,13 @@
           left: 9px
           top: 7px
           background:
-            color: $color-skills-red
+            color: $color-skills-pink
 
         &:nth-child(2)
           right: 9px
           top: 2px
           background:
-            color: $color-skills-yellow
+            color: $color-skills-blue
 
 
   .body
@@ -157,12 +157,15 @@
 
         .txt
           width: 100%
-          height: 12px
+          height: 11px
           margin: 5px 0
-          border: 5px double $color-skills-gray
+          border:
+            top: 5px double $color-skills-gray
+            bottom: 5px double $color-skills-gray
           box-sizing: border-box
 
         .btn
+          @include border-radius(0)
           width: 50%
           height: 15px
           background:
