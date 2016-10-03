@@ -84,12 +84,13 @@ app.factory('WorksService', function () {
             images: [
                 {id: 1, name: 'Home', image: 'home.jpg'},
                 {id: 2, name: 'Le Essence', image: 'essence.jpg'},
-                {id: 3, name: 'Le Essence', image: 'essence.jpg'},
-                {id: 4, name: 'Le Essence', image: 'essence.jpg'},
-                {id: 5, name: 'Le Essence', image: 'essence.jpg'},
-                {id: 6, name: 'Le Essence', image: 'essence.jpg'},
-                {id: 7, name: 'Le Essence', image: 'essence.jpg'},
-                {id: 8, name: 'Le Essence', image: 'essence.jpg'}
+                {id: 3, name: 'La Mode', image: 'mode.jpg'},
+                {id: 4, name: 'La Mode', image: 'products.jpg'},
+                {id: 5, name: 'L\'Experience', image: 'experience.jpg'},
+                {id: 6, name: 'L\'Experience', image: 'experience2.jpg'},
+                {id: 7, name: 'Les Talents', image: 'talents.jpg'},
+                {id: 8, name: 'Les Talents', image: 'talents2.jpg'},
+                {id: 9, name: 'Le Journal', image: 'journal.jpg'}
             ], tags: ['wordpress', 'woocommerce', 'html', 'css3', 'javascript', 'jquery', 'bootstrap'], url: ''},
         {id: 10, name: 'GypaNews Online', shortdescription: 'Desenvolvimento Wordpress', path: 'gypanews',
             description: 'Desenvolvimento Wordpress',
