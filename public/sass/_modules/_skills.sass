@@ -2,10 +2,8 @@
   @extend %page
 
   @media #{$small-max}
-    margin:
-      top: 0
-    padding:
-      top: 0
+    margin: 0
+    padding: 0
 
   h1
     @extend %h1
@@ -55,6 +53,9 @@
     overflow: hidden
     padding: 0 40px
 
+    @media #{$small-max}
+      padding: 0 15px
+
     &:nth-child(odd)
       background:
         color: $color-primary-soft
@@ -99,10 +100,6 @@
           color: $color-primary
         border: 1px solid $color-primary
         color: $color-secondary
-
-        @media #{$xsmall-max}
-          font:
-            size: .6em
 
         &:hover
           background:

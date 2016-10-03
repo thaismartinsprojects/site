@@ -47,7 +47,7 @@
 
       @media #{$small-max}
         margin:
-          top: 0
+          top: 50px
         padding: 20px 0 0
 
       h1
@@ -79,6 +79,9 @@
         @include transition(all .3s 1s)
         padding: 10px 20px
         opacity: 0
+
+        @media #{$small-max}
+          margin: 50px auto
 
   .prev,
   .next

@@ -34,7 +34,11 @@
   p
     @extend %p
     font:
-      size: 1.4em !important
+      size: 1.4em
+
+    @media #{$small-max}
+      font:
+        size: 1em
 
   b,
   strong
