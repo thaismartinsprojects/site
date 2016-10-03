@@ -79,7 +79,12 @@ app.factory('WorksService', function () {
                 {id: 6, name: 'Le Essence', image: 'essence.jpg'},
                 {id: 7, name: 'Le Essence', image: 'essence.jpg'},
                 {id: 8, name: 'Le Essence', image: 'essence.jpg'}
-            ], tags: ['wordpress', 'woocommerce', 'html', 'css3', 'javascript', 'jquery', 'bootstrap'], url: ''}
+            ], tags: ['wordpress', 'woocommerce', 'html', 'css3', 'javascript', 'jquery', 'bootstrap'], url: ''},
+        {id: 9, name: 'GypaNews Online', shortdescription: 'Desenvolvimento Wordpress', path: 'gypanews',
+            description: 'Desenvolvimento Wordpress',
+            images: [
+                {id: 1, name: 'Home', image: 'home.jpg'}
+            ], tags: ['wordpress', 'html', 'css3', 'javascript', 'jquery', 'bootstrap'], url: 'http://www.gypanewsonline.com.br/'}
     ];
 
     return {
