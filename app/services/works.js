@@ -39,10 +39,12 @@ app.factory('WorksService', function () {
             description: 'Desenvolvimento FrontEnd',
             images: [
                 {id: 1, name: 'Login', image: 'login.jpg'},
-                {id: 2, name: 'Home', image: 'home.jpg'},
-                {id: 3, name: 'Home', image: 'home.jpg'},
-                {id: 4, name: 'Bares', image: 'bars.jpg'},
-                {id: 5, name: 'Favoritos', image: 'favorites.jpg'}
+                {id: 2, name: 'Listagem de Clientes', image: 'clients.jpg'},
+                {id: 3, name: 'Modal de Cliente', image: 'client.jpg'},
+                {id: 4, name: 'Mensagens', image: 'messages.jpg'},
+                {id: 5, name: 'Painel de Controle', image: 'panel.jpg'},
+                {id: 6, name: 'Cotações e Renovações', image: 'quotations.jpg'},
+                {id: 7, name: 'Upload de Imagens', image: 'images.jpg'},
             ], tags: ['html', 'css3', 'javascript', 'angularjs', 'bootstrap'], url: 'http://www.appolice.me/dashboard'},
         {id: 6, name: 'CheckBeer', shortdescription: 'Aplicativo Android e IOS', path: 'checkbeer',
             description: 'Desenvolvimento App Android e IOS',
