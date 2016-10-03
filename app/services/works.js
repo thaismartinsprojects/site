@@ -30,10 +30,19 @@ app.factory('WorksService', function () {
             description: 'Desenvolvimento FrontEnd',
             images: [
                 {id: 1, name: 'Home', image: 'home.jpg'},
-                {id: 2, name: 'Busca', image: 'search.jpg'},
-                {id: 3, name: 'Cadastro Usuário', image: 'register.jpg'},
-                {id: 4, name: 'Cadastro Profissional', image: 'register-professional.jpg'},
-                {id: 5, name: 'Cadastro Profissional', image: 'register-professional-2.jpg'}
+                {id: 2, name: 'Menu de Categorias', image: 'menu.jpg'},
+                {id: 3, name: 'Menu Lateral', image: 'menu-side.jpg'},
+                {id: 4, name: 'Busca', image: 'search.jpg'},
+                {id: 5, name: 'Login', image: 'login.jpg'},
+                {id: 6, name: 'Cadastro Usuário', image: 'register.jpg'},
+                {id: 7, name: 'Cadastro Profissional', image: 'register-professional.jpg'},
+                {id: 8, name: 'Cadastro Profissional', image: 'register-professional-2.jpg'},
+                {id: 9, name: 'Perfil Profissional (Sem Permissão)', image: 'my-project.jpg'},
+                {id: 10, name: 'Perfil Profissional (Com Permissão)', image: 'profile.jpg'},
+                {id: 11, name: 'Modal de Novos Projetos', image: 'new-project.jpg'},
+                {id: 12, name: 'Minha Conta', image: 'account.jpg'},
+                {id: 13, name: 'Meus Endereços', image: 'address.jpg'},
+                {id: 14, name: 'Favoritos', image: 'favorites.jpg'}
             ], tags: ['angularjs', 'html', 'css3', 'javascript', 'jquery', 'bootstrap'], url: ''},
         {id: 5, name: 'Appolice', shortdescription: 'Desenvolvimento FrontEnd', path: 'appolice',
             description: 'Desenvolvimento FrontEnd',
