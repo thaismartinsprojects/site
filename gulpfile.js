@@ -37,13 +37,22 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('public/css'));
 });
 
-gulp.task('styles:dependencies', function() {
+gulp.task('dependencies', function() {
     gulp.src(cssFiles)
         .pipe(sourcemaps.init())
         .pipe(concat('dependencies.min.css'))
         .on('error', logError)
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('public/css'));
+
+    gulp.src(jsFiles)
+        .pipe(sourcemaps.init())
+        .pipe(concat('dependencies.js'))
+        .pipe(uglify())
+        .on('error', logError)
+        .pipe(rename('dependencies.min.js'))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('public/js'));
 });
 
 gulp.task('scripts', function() {
@@ -62,17 +71,6 @@ gulp.task('scripts', function() {
         .pipe(uglify())
         .on('error', logError)
         .pipe(rename('app.min.js'))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('public/js'));
-});
-
-gulp.task('scripts:dependencies', function() {
-    gulp.src(jsFiles)
-        .pipe(sourcemaps.init())
-        .pipe(concat('dependencies.js'))
-        .pipe(uglify())
-        .on('error', logError)
-        .pipe(rename('dependencies.min.js'))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('public/js'));
 });
@@ -112,9 +110,8 @@ gulp.task('watch', function() {
 
 gulp.task('build', [
     'scripts',
-    'scripts:dependencies',
+    'dependencies',
     'styles',
-    'styles:dependencies',
     'images',
     'fonts',
     'copy-files'
