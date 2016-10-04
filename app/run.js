@@ -12,4 +12,7 @@ angular.module('thaisMartins')
 
     $rootScope.currentWork = false;
     $rootScope.currentWorkImage = false;
-}]);
+}])
+.constant('RESOURCES', {
+    'API_URL': 'https://thaismartins-api.herokuapp.com/api'
+});

@@ -44,8 +44,8 @@
         </div>
 
         <div class="col-xs-12 col-sm-8">
-            <div class="warning {{success}}" ng-show="contactSend">
-                <p> {{message}}</p>
+            <div class="warning error" ng-if="error">
+                <p>{{message}}</p>
             </div>
 
             <div class="form-group" ng-class="{'active': contact.name.length > 0}">
@@ -68,7 +68,8 @@
 
                 <button class="btn btn-special-fill btn-center" ng-click="sendEmail()"
                         ng-class="{'sending': sendingContact, 'sended': contactSend}">
-                    <span>Enviar <i class="fa fa-check"></i></span>
+                    <span ng-if="!contactSend">Enviar</span>
+                    <span ng-if="contactSend">Enviado <i class="fa fa-check"></i></span>
                     <span class="progress-line"></span>
                 </button>
             </div>
