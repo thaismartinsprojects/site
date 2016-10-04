@@ -3,7 +3,7 @@
 var app = angular.module('thaisMartins');
 app.factory('ContactService', ['$http', 'RESOURCES', function ($http, RESOURCES) {
 
-    var apiUrl = RESOURCES + '/accounts';
+    var apiUrl = RESOURCES.API_URL + '/accounts';
     $http.defaults.headers.post["Content-Type"] = "application/json";
 
     return {
