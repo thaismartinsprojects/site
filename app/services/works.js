@@ -67,9 +67,9 @@ app.factory('WorksService', function () {
         {id: 7, name: 'Izzi App', shortdescription: 'Desenvolvimento App Android e IOS', path: 'iziiapp',
             description: 'Desenvolvimento App Android e IOS',
             images: [
-                {id: 1, name: 'Login', image: 'login.jpg'},
-                {id: 2, name: 'Cadastro de Usuário', image: 'register.jpg'},
-                {id: 3, name: 'Recuperar Senha', image: 'remember.jpg'}
+                {id: 1, name: 'Login', image: 'login.png'},
+                {id: 2, name: 'Cadastro de Usuário', image: 'register.png'},
+                {id: 3, name: 'Recuperar Senha', image: 'remember.png'}
             ], tags: ['nodejs', 'express', 'websockets', 'painel administrativo', 'html', 'css3', 'javascript', 'bootstrap', 'ionic', 'cordova', 'phonegap', 'angularjs'], url: ''},
         {id: 8, name: 'Medtronic', shortdescription: 'Desenvolvimento FrontEnd', path: 'medtronic',
             description: 'Desenvolvimento FrontEnd',
