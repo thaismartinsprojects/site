@@ -68,10 +68,8 @@ app.factory('WorksService', function () {
             description: 'Desenvolvimento App Android e IOS',
             images: [
                 {id: 1, name: 'Login', image: 'login.jpg'},
-                {id: 2, name: 'Home', image: 'home.jpg'},
-                {id: 3, name: 'Home', image: 'home.jpg'},
-                {id: 4, name: 'Bares', image: 'bars.jpg'},
-                {id: 5, name: 'Favoritos', image: 'favorites.jpg'}
+                {id: 2, name: 'Cadastro de Usuário', image: 'register.jpg'},
+                {id: 3, name: 'Recuperar Senha', image: 'remember.jpg'}
             ], tags: ['nodejs', 'express', 'websockets', 'painel administrativo', 'html', 'css3', 'javascript', 'bootstrap', 'ionic', 'cordova', 'phonegap', 'angularjs'], url: ''},
         {id: 8, name: 'Medtronic', shortdescription: 'Desenvolvimento FrontEnd', path: 'medtronic',
             description: 'Desenvolvimento FrontEnd',
