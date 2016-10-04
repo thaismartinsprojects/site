@@ -53,7 +53,7 @@ app.factory('WorksService', function () {
                 {id: 4, name: 'Mensagens', image: 'messages.jpg'},
                 {id: 5, name: 'Painel de Controle', image: 'panel.jpg'},
                 {id: 6, name: 'Cotações e Renovações', image: 'quotations.jpg'},
-                {id: 7, name: 'Upload de Imagens', image: 'images.jpg'},
+                {id: 7, name: 'Upload de Imagens', image: 'images.jpg'}
             ], tags: ['html', 'css3', 'javascript', 'angularjs', 'bootstrap'], url: 'http://www.appolice.me/dashboard'},
         {id: 6, name: 'CheckBeer', shortdescription: 'Aplicativo Android e IOS', path: 'checkbeer',
             description: 'Desenvolvimento App Android e IOS',
@@ -99,9 +99,15 @@ app.factory('WorksService', function () {
                 {id: 9, name: 'Le Journal', image: 'journal.jpg'}
             ], tags: ['wordpress', 'woocommerce', 'html', 'css3', 'javascript', 'jquery', 'bootstrap'], url: ''},
         {id: 10, name: 'GypaNews Online', shortdescription: 'Desenvolvimento Wordpress', path: 'gypanews',
-            description: 'Desenvolvimento Wordpress',
+            description: 'Desenvolvimento wordpress da versão online do jornal do bairro Morumbi',
             images: [
-                {id: 1, name: 'Home', image: 'home.jpg'}
+                {id: 1, name: 'Home', image: 'home.jpg'},
+                {id: 2, name: 'Sobre a GypaNews', image: 'about.jpg'},
+                {id: 3, name: 'Perfil', image: 'profile.jpg'},
+                {id: 4, name: 'Guia do Bairro', image: 'guide.jpg'},
+                {id: 5, name: 'Dicas', image: 'tips.jpg'},
+                {id: 6, name: 'Agenda', image: 'calendar.jpg'},
+                {id: 7, name: 'Página Interna', image: 'intern.jpg'}
             ], tags: ['wordpress', 'html', 'css3', 'javascript', 'jquery', 'bootstrap'], url: 'http://www.gypanewsonline.com.br/'}
     ];
 
