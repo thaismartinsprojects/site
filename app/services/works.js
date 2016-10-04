@@ -76,15 +76,15 @@ app.factory('WorksService', function () {
         {id: 8, name: 'Medtronic', shortdescription: 'Desenvolvimento FrontEnd', path: 'medtronic',
             description: 'Desenvolvimento FrontEnd',
             images: [
-                {id: 1, name: 'Home', image: 'home.jpg'},
-                {id: 2, name: 'Sobre a Medtronic', image: 'medtronic.jpg'},
-                {id: 3, name: 'Encontre um Médico', image: 'doctors.jpg'},
-                {id: 4, name: 'Tratamento', image: 'treatment.jpg'},
-                {id: 5, name: 'Desvendando Mitos', image: 'myths.jpg'},
-                {id: 6, name: 'Perguntas Frequentes', image: 'faq.jpg'},
-                {id: 7, name: 'Histórias', image: 'history.jpg'},
-                {id: 8, name: 'Contato', image: 'contact.jpg'}
-            ], tags: ['html', 'css3', 'javascript', 'jquery', 'bootstrap'], url: ''},
+                {id: 1, name: 'Home', image: 'home.png'},
+                {id: 2, name: 'Sobre a Medtronic', image: 'medtronic.png'},
+                {id: 3, name: 'Encontre um Médico', image: 'doctors.png'},
+                {id: 4, name: 'Tratamento', image: 'treatment.png'},
+                {id: 5, name: 'Desvendando Mitos', image: 'myths.png'},
+                {id: 6, name: 'Perguntas Frequentes', image: 'faq.png'},
+                {id: 7, name: 'Histórias', image: 'history.png'},
+                {id: 8, name: 'Contato', image: 'contact.png'}
+            ], tags: ['html', 'css3', 'javascript', 'jquery', 'bootstrap'], url: 'http://tratandovarizes.com.br/'},
         {id: 9, name: 'Maison Alexandrine', shortdescription: 'Desenvolvimento Ecommerce', path: 'alexandrine',
             description: 'Desenvolvimento Ecommerce',
             images: [
