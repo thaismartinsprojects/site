@@ -101,13 +101,13 @@ app.factory('WorksService', function () {
         {id: 10, name: 'GypaNews Online', shortdescription: 'Desenvolvimento Wordpress', path: 'gypanews',
             description: 'Desenvolvimento wordpress da versão online do jornal do bairro Morumbi',
             images: [
-                {id: 1, name: 'Home', image: 'home.jpg'},
-                {id: 2, name: 'Sobre a GypaNews', image: 'about.jpg'},
-                {id: 3, name: 'Perfil', image: 'profile.jpg'},
-                {id: 4, name: 'Guia do Bairro', image: 'guide.jpg'},
-                {id: 5, name: 'Dicas', image: 'tips.jpg'},
-                {id: 6, name: 'Agenda', image: 'calendar.jpg'},
-                {id: 7, name: 'Página Interna', image: 'intern.jpg'}
+                {id: 1, name: 'Home', image: 'home.png'},
+                {id: 2, name: 'Sobre a GypaNews', image: 'about.png'},
+                {id: 3, name: 'Perfil', image: 'profile.png'},
+                {id: 4, name: 'Guia do Bairro', image: 'guide.png'},
+                {id: 5, name: 'Dicas', image: 'tips.png'},
+                {id: 6, name: 'Agenda', image: 'calendar.png'},
+                {id: 7, name: 'Página Interna', image: 'intern.png'}
             ], tags: ['wordpress', 'html', 'css3', 'javascript', 'jquery', 'bootstrap'], url: 'http://www.gypanewsonline.com.br/'}
     ];
 
